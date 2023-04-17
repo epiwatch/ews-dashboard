@@ -1,0 +1,7 @@
+name: ews-public-dashboard
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - nodejs=18.15.0
+  - yarn=3.5.0
