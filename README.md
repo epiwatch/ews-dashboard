@@ -22,7 +22,7 @@ SPDX-License-Identifier: Apache-2.0
     <br />
   </p>
   <p>
-    Copyright &copy; University of New South Wales.<br/><a href="https://www.epiwatch.org/">EPIWATCH™️</a> is a trademark of <a href="https://www.unsw.edu.au/">UNSW</a>.
+    Copyright&copy; University of New South Wales.<br/><a href="https://www.epiwatch.org/">EPIWATCH&reg;</a> is a registered trademark of <a href="https://www.unsw.edu.au/">UNSW</a>.
   </p>
 </div>
 
@@ -43,7 +43,7 @@ EPIWATCH is the leading platform for rapid detection of emerging diseases signal
 
 The EPIWATCH product has emerged from a research project at UNSW, led by Professor <a href="https://research.unsw.edu.au/people/professor-raina-macintyre">Raina MacIntyre</a> (Head of Biosecurity), a Eureka Award winner for her scientific leadership. In 2022, EPIWATCH received a significant donation from Vitalik Buterin's Balvi Filanthropic Fund. In 2022, the project won <a href="https://www.innovationaus.com/videos/innovationaus-awards-2022-highlights/">InnovationAus 2022 People's Choice Award</a>.
 
-The code in this current open source repository (initially a report viewer component and part of the public front-end), is our first public step towards building an open-source development community around detection of emerging infectious diseases of high consequence. We hope you'll join us in helping to build a healthier world.
+The code in this current open source repository (initially a report and statistics viewer component and part of the public front-end), is our first public step towards building an open-source development community around detection of emerging infectious diseases of high consequence. We hope you'll join us in helping to build a healthier world.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -105,7 +105,7 @@ Open the app in a web browser by navigating to the development server's configur
 
 The page should render approximately like this (depending on the API or sample data available):
 
-<img src="public/screenshot-reports-table-browser.png" alt="Screenshot of Reports table UI rendered in web browser"/>
+<img src="public/new-dashboard-dataset.png" alt="Screenshot of Reports table UI rendered in web browser"/>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

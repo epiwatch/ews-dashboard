@@ -1,4 +1,4 @@
-All trademark rights to EPIWATCH™️ are reserved.
+EPIWATCH&reg; is a registered trademark of University of New South Wales. All rights reserved.
 
 Please contact the EPIWATCH team if you wish to use the name EPIWATCH.
 

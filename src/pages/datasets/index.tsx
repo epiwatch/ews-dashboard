@@ -1,10 +1,9 @@
 import { useMemo } from "react";
 import type { GetServerSidePropsContext, InferGetServerSidePropsType } from "next";
-import Head from "next/head";
 import Image from "next/image";
 import { AgGridReact } from "ag-grid-react"; // the AG Grid React Component
 
-import styles from "../styles/Home.module.css";
+import styles from "@/styles/Home.module.css";
 import "ag-grid-community/styles/ag-grid.css"; // Core grid CSS, always needed
 import "ag-grid-community/styles/ag-theme-alpine.css"; // Optional theme CSS
 
@@ -24,7 +23,7 @@ const gridOptionsComponents = {
   }
 };
 
-export default function Home({ rowData }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+export default function Dataset({ rowData }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const gridOptions = useMemo(() => ({
     components: gridOptionsComponents
   }), []);
@@ -40,7 +39,7 @@ export default function Home({ rowData }: InferGetServerSidePropsType<typeof get
 
   const columnDefs = useMemo(() => [
     {
-      field: "publication_date", width: 180, cellRenderer: "colWithLoader", headerName: "Publication Date", filter: "agDateColumnFilter",
+      field: "date", width: 180, cellRenderer: "colWithLoader", headerName: "Date", filter: "agDateColumnFilter",
       filterParams: {
         buttons: ["apply", "reset"],
         closeOnApply: true,
@@ -75,29 +74,20 @@ export default function Home({ rowData }: InferGetServerSidePropsType<typeof get
     },
     { field: "diseases", flex: 1 },
     { field: "syndromes", flex: 1 },
-    { field: "title", flex: 3, cellRenderer: "titleLinkCell" },
     { field: "location", flex: 2 }
   ], []);
 
   return (
-    <>
-      <Head>
-        <title>Reports Table</title>
-        <meta name="description" content="EPIWATCH Reports Table" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className={`ag-theme-alpine ${styles.reportsTable}`}>
-        <AgGridReact
-          rowData={rowData} // Row Data for Rows
-          columnDefs={columnDefs} // Column Defs for Columns
-          defaultColDef={defaultColDef} // Default Column Properties
-          gridOptions={gridOptions}
-          suppressMultiSort={true}
-          animateRows={true} // Optional - set to 'true' to have rows animate when sorted
-        />
-      </div>
-    </>
+    <div className={`ag-theme-alpine ${styles.reportsTable}`}>
+      <AgGridReact
+        rowData={rowData} // Row Data for Rows
+        columnDefs={columnDefs} // Column Defs for Columns
+        defaultColDef={defaultColDef} // Default Column Properties
+        gridOptions={gridOptions}
+        suppressMultiSort={true}
+        animateRows={true} // Optional - set to 'true' to have rows animate when sorted
+      />
+    </div>
   );
 }
 
