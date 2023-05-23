@@ -1,0 +1,82 @@
+[
+    {
+        "id": "6",
+        "syndrome": "Acute fever and rash",
+        "active": true
+    },
+    {
+        "id": "2",
+        "syndrome": "Acute Flaccid Paralysis",
+        "active": true
+    },
+    {
+        "id": "3",
+        "syndrome": "Acute gastroenteritis",
+        "active": true
+    },
+    {
+        "id": "21",
+        "syndrome": "conjunctivitis",
+        "active": true
+    },
+    {
+        "id": "8",
+        "syndrome": "Encephalitis ",
+        "active": true
+    },
+    {
+        "id": "7",
+        "syndrome": "Febrile syndromes",
+        "active": true
+    },
+    {
+        "id": "1",
+        "syndrome": "Haemorrhagic Fever",
+        "active": true
+    },
+    {
+        "id": "17",
+        "syndrome": "hemolytic uremic syndrome",
+        "active": true
+    },
+    {
+        "id": "5",
+        "syndrome": "Influenza-like illness",
+        "active": true
+    },
+    {
+        "id": "16",
+        "syndrome": "Jaundice",
+        "active": true
+    },
+    {
+        "id": "9",
+        "syndrome": "Meningitis",
+        "active": true
+    },
+    {
+        "id": "11",
+        "syndrome": "other paralysis",
+        "active": true
+    },
+    {
+        "id": "15",
+        "syndrome": "PIMS-TS",
+        "active": true
+    },
+    {
+        "id": "10",
+        "syndrome": "pneumonia",
+        "active": true
+    },
+    {
+        "id": "4",
+        "syndrome": "severe acute respiratory syndrome",
+        "active": true
+    },
+    {
+        "id": "18",
+        "syndrome": "Tomato fever",
+        "active": true
+    }
+]

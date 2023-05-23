@@ -105,7 +105,7 @@ Open the app in a web browser by navigating to the development server's configur
 
 The page should render approximately like this (depending on the API or sample data available):
 
-<img src="public/new-dashboard-dataset.png" alt="Screenshot of Reports table UI rendered in web browser"/>
+<img src="public/ews-dashboard-dataset.png" alt="Screenshot of Reports table UI rendered in web browser"/>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

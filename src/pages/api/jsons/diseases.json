@@ -1,0 +1,942 @@
+[
+    {
+        "id": "158",
+        "disease": "acinetobacter ",
+        "active": true
+    },
+    {
+        "id": "139",
+        "disease": "adenovirus",
+        "active": true
+    },
+    {
+        "id": "87",
+        "disease": "African Swine Fever",
+        "active": true
+    },
+    {
+        "id": "186",
+        "disease": "African tick bite fever",
+        "active": true
+    },
+    {
+        "id": "184",
+        "disease": "African Trypanosomiasis",
+        "active": true
+    },
+    {
+        "id": "137",
+        "disease": "Akhmeta virus",
+        "active": true
+    },
+    {
+        "id": "116",
+        "disease": "alaskapox",
+        "active": true
+    },
+    {
+        "id": "140",
+        "disease": "amoeba",
+        "active": true
+    },
+    {
+        "id": "163",
+        "disease": "anaplasmosis",
+        "active": true
+    },
+    {
+        "id": "3",
+        "disease": "anthrax/cutaneous",
+        "active": true
+    },
+    {
+        "id": "4",
+        "disease": "anthrax/gastrointestinal",
+        "active": true
+    },
+    {
+        "id": "5",
+        "disease": "anthrax/inhalation",
+        "active": true
+    },
+    {
+        "id": "79",
+        "disease": "anthrax/unspecified",
+        "active": true
+    },
+    {
+        "id": "103",
+        "disease": "Argentine hemorrhagic fever",
+        "active": true
+    },
+    {
+        "id": "73",
+        "disease": "avian influenza/unspecified",
+        "active": true
+    },
+    {
+        "id": "145",
+        "disease": "babesiosis",
+        "active": true
+    },
+    {
+        "id": "92",
+        "disease": "Barmah Forest virus infection",
+        "active": true
+    },
+    {
+        "id": "199",
+        "disease": "Blastomycosis",
+        "active": true
+    },
+    {
+        "id": "154",
+        "disease": "bornavirus",
+        "active": true
+    },
+    {
+        "id": "6",
+        "disease": "botulism",
+        "active": true
+    },
+    {
+        "id": "7",
+        "disease": "brucellosis",
+        "active": true
+    },
+    {
+        "id": "114",
+        "disease": "burkholderia cepacia complex",
+        "active": true
+    },
+    {
+        "id": "146",
+        "disease": "buruli ulcer",
+        "active": true
+    },
+    {
+        "id": "101",
+        "disease": "campylobacteriosis",
+        "active": true
+    },
+    {
+        "id": "124",
+        "disease": "Candida ",
+        "active": true
+    },
+    {
+        "id": "155",
+        "disease": "Chapare hemorrhagic fever",
+        "active": true
+    },
+    {
+        "id": "8",
+        "disease": "chikungunya",
+        "active": true
+    },
+    {
+        "id": "9",
+        "disease": "cholera",
+        "active": true
+    },
+    {
+        "id": "10",
+        "disease": "covid19",
+        "active": true
+    },
+    {
+        "id": "90",
+        "disease": "Creutzfeldt-Jakob disease",
+        "active": true
+    },
+    {
+        "id": "13",
+        "disease": "crimean-congo haemorrhagic fever",
+        "active": true
+    },
+    {
+        "id": "11",
+        "disease": "cryptococcosis",
+        "active": true
+    },
+    {
+        "id": "12",
+        "disease": "cryptosporidiosis",
+        "active": true
+    },
+    {
+        "id": "113",
+        "disease": "cyclosporiasis",
+        "active": true
+    },
+    {
+        "id": "112",
+        "disease": "Dabie bandavirus",
+        "active": true
+    },
+    {
+        "id": "14",
+        "disease": "dengue",
+        "active": true
+    },
+    {
+        "id": "15",
+        "disease": "diphtheria",
+        "active": true
+    },
+    {
+        "id": "108",
+        "disease": "dirofilariasis",
+        "active": true
+    },
+    {
+        "id": "80",
+        "disease": "E Coli",
+        "active": true
+    },
+    {
+        "id": "119",
+        "disease": "Eastern Equine Encephalitis ",
+        "active": true
+    },
+    {
+        "id": "16",
+        "disease": "ebola haemorrhagic fever",
+        "active": true
+    },
+    {
+        "id": "150",
+        "disease": "echinococcosis",
+        "active": true
+    },
+    {
+        "id": "89",
+        "disease": "Echovirus",
+        "active": true
+    },
+    {
+        "id": "17",
+        "disease": "ehec (e.coli)",
+        "active": true
+    },
+    {
+        "id": "97",
+        "disease": "Ehrlichiosis",
+        "active": true
+    },
+    {
+        "id": "83",
+        "disease": "Encephalitis",
+        "active": true
+    },
+    {
+        "id": "196",
+        "disease": "Entamoeba histolytica",
+        "active": true
+    },
+    {
+        "id": "160",
+        "disease": "enterovirus (unspecified)",
+        "active": true
+    },
+    {
+        "id": "18",
+        "disease": "enterovirus 71 infection",
+        "active": true
+    },
+    {
+        "id": "88",
+        "disease": "enterovirus D68",
+        "active": true
+    },
+    {
+        "id": "165",
+        "disease": "Equine infectious anemia",
+        "active": true
+    },
+    {
+        "id": "193",
+        "disease": "Filariasis",
+        "active": true
+    },
+    {
+        "id": "161",
+        "disease": "foot and mouth disease",
+        "active": true
+    },
+    {
+        "id": "191",
+        "disease": "Gnathostomiasis",
+        "active": true
+    },
+    {
+        "id": "179",
+        "disease": "goatpox",
+        "active": true
+    },
+    {
+        "id": "143",
+        "disease": "gonorrhea",
+        "active": true
+    },
+    {
+        "id": "177",
+        "disease": "Group A Streptococcus",
+        "active": true
+    },
+    {
+        "id": "27",
+        "disease": "hand, foot and mouth disease",
+        "active": true
+    },
+    {
+        "id": "135",
+        "disease": "Hansen's disease",
+        "active": true
+    },
+    {
+        "id": "28",
+        "disease": "hantavirus",
+        "active": true
+    },
+    {
+        "id": "136",
+        "disease": "heartland virus",
+        "active": true
+    },
+    {
+        "id": "129",
+        "disease": "Hendra virus",
+        "active": true
+    },
+    {
+        "id": "76",
+        "disease": "hepatitis (unspecified)",
+        "active": true
+    },
+    {
+        "id": "29",
+        "disease": "hepatitis a",
+        "active": true
+    },
+    {
+        "id": "30",
+        "disease": "hepatitis b",
+        "active": true
+    },
+    {
+        "id": "31",
+        "disease": "hepatitis c",
+        "active": true
+    },
+    {
+        "id": "32",
+        "disease": "hepatitis d",
+        "active": true
+    },
+    {
+        "id": "33",
+        "disease": "hepatitis e",
+        "active": true
+    },
+    {
+        "id": "175",
+        "disease": "Herpangina",
+        "active": true
+    },
+    {
+        "id": "148",
+        "disease": "herpes b virus",
+        "active": true
+    },
+    {
+        "id": "147",
+        "disease": "herpes simplex virus",
+        "active": true
+    },
+    {
+        "id": "34",
+        "disease": "histoplasmosis",
+        "active": true
+    },
+    {
+        "id": "35",
+        "disease": "hiv/aids",
+        "active": true
+    },
+    {
+        "id": "174",
+        "disease": "Human metapneumovirus ",
+        "active": true
+    },
+    {
+        "id": "194",
+        "disease": "Illheus virus",
+        "active": true
+    },
+    {
+        "id": "71",
+        "disease": "influenza",
+        "active": true
+    },
+    {
+        "id": "162",
+        "disease": "Influenza A",
+        "active": true
+    },
+    {
+        "id": "181",
+        "disease": "influenza a/h10n3",
+        "active": true
+    },
+    {
+        "id": "22",
+        "disease": "influenza a/h1n1",
+        "active": true
+    },
+    {
+        "id": "23",
+        "disease": "influenza a/h1n2",
+        "active": true
+    },
+    {
+        "id": "26",
+        "disease": "influenza a/h2n2",
+        "active": true
+    },
+    {
+        "id": "25",
+        "disease": "influenza a/h3n2",
+        "active": true
+    },
+    {
+        "id": "24",
+        "disease": "influenza a/h3n5",
+        "active": true
+    },
+    {
+        "id": "84",
+        "disease": "influenza a/h3n8",
+        "active": true
+    },
+    {
+        "id": "19",
+        "disease": "influenza a/h5n1",
+        "active": true
+    },
+    {
+        "id": "74",
+        "disease": "influenza a/h5n6",
+        "active": true
+    },
+    {
+        "id": "72",
+        "disease": "influenza a/h5n8",
+        "active": true
+    },
+    {
+        "id": "157",
+        "disease": "influenza a/h7n3",
+        "active": true
+    },
+    {
+        "id": "20",
+        "disease": "influenza a/h7n9",
+        "active": true
+    },
+    {
+        "id": "21",
+        "disease": "influenza a/h9n2",
+        "active": true
+    },
+    {
+        "id": "81",
+        "disease": "influenza b",
+        "active": true
+    },
+    {
+        "id": "133",
+        "disease": "influenza/h5n2",
+        "active": true
+    },
+    {
+        "id": "78",
+        "disease": "influenza/h5n3",
+        "active": true
+    },
+    {
+        "id": "77",
+        "disease": "influenza/h5n5",
+        "active": true
+    },
+    {
+        "id": "107",
+        "disease": "Jamestown Canyon virus infection",
+        "active": true
+    },
+    {
+        "id": "120",
+        "disease": "Japanese Encephalitis",
+        "active": true
+    },
+    {
+        "id": "127",
+        "disease": "Jingmen tick virus",
+        "active": true
+    },
+    {
+        "id": "141",
+        "disease": "Karshi virus",
+        "active": true
+    },
+    {
+        "id": "125",
+        "disease": "Kyasanur forest disease",
+        "active": true
+    },
+    {
+        "id": "171",
+        "disease": "Langya Virus",
+        "active": true
+    },
+    {
+        "id": "36",
+        "disease": "lassa fever",
+        "active": true
+    },
+    {
+        "id": "67",
+        "disease": "legionnaires",
+        "active": true
+    },
+    {
+        "id": "70",
+        "disease": "leishmaniasis",
+        "active": true
+    },
+    {
+        "id": "86",
+        "disease": "leptospirosis",
+        "active": true
+    },
+    {
+        "id": "68",
+        "disease": "listeriosis",
+        "active": true
+    },
+    {
+        "id": "85",
+        "disease": "Lloviu",
+        "active": true
+    },
+    {
+        "id": "138",
+        "disease": "Lumpy skin disease",
+        "active": true
+    },
+    {
+        "id": "110",
+        "disease": "lyme disease",
+        "active": true
+    },
+    {
+        "id": "173",
+        "disease": "lymphocytic choriomeningitis virus",
+        "active": true
+    },
+    {
+        "id": "117",
+        "disease": "mad cow disease",
+        "active": true
+    },
+    {
+        "id": "37",
+        "disease": "malaria",
+        "active": true
+    },
+    {
+        "id": "38",
+        "disease": "marburg virus disease",
+        "active": true
+    },
+    {
+        "id": "39",
+        "disease": "measles",
+        "active": true
+    },
+    {
+        "id": "98",
+        "disease": "Melioidosis",
+        "active": true
+    },
+    {
+        "id": "131",
+        "disease": "meningococcal",
+        "active": true
+    },
+    {
+        "id": "40",
+        "disease": "MERS",
+        "active": true
+    },
+    {
+        "id": "69",
+        "disease": "monkeypox",
+        "active": true
+    },
+    {
+        "id": "115",
+        "disease": "mucormycosis",
+        "active": true
+    },
+    {
+        "id": "41",
+        "disease": "mumps",
+        "active": true
+    },
+    {
+        "id": "132",
+        "disease": "Murray Valley Encephalitis",
+        "active": true
+    },
+    {
+        "id": "197",
+        "disease": "mycobacter",
+        "active": true
+    },
+    {
+        "id": "180",
+        "disease": "mycoplasma genitalium",
+        "active": true
+    },
+    {
+        "id": "95",
+        "disease": "Naegleria fowleri",
+        "active": true
+    },
+    {
+        "id": "144",
+        "disease": "necrotizing fasciitis",
+        "active": true
+    },
+    {
+        "id": "122",
+        "disease": "Newcastle disease",
+        "active": true
+    },
+    {
+        "id": "42",
+        "disease": "nipah virus",
+        "active": true
+    },
+    {
+        "id": "43",
+        "disease": "norovirus",
+        "active": true
+    },
+    {
+        "id": "183",
+        "disease": "onchocerciasis",
+        "active": true
+    },
+    {
+        "id": "153",
+        "disease": "oropouche fever",
+        "active": true
+    },
+    {
+        "id": "102",
+        "disease": "orthopox virus",
+        "active": true
+    },
+    {
+        "id": "2",
+        "disease": "other",
+        "active": true
+    },
+    {
+        "id": "188",
+        "disease": "Paratyphoid fever",
+        "active": true
+    },
+    {
+        "id": "159",
+        "disease": "parechovirus",
+        "active": true
+    },
+    {
+        "id": "128",
+        "disease": "parvovirus",
+        "active": true
+    },
+    {
+        "id": "44",
+        "disease": "pertussis",
+        "active": true
+    },
+    {
+        "id": "45",
+        "disease": "plague",
+        "active": true
+    },
+    {
+        "id": "46",
+        "disease": "pneumococcus pneumonia",
+        "active": true
+    },
+    {
+        "id": "75",
+        "disease": "pneumonia of unknown origin",
+        "active": true
+    },
+    {
+        "id": "47",
+        "disease": "poliomyelitis",
+        "active": true
+    },
+    {
+        "id": "100",
+        "disease": "Powassan Virus infection",
+        "active": true
+    },
+    {
+        "id": "123",
+        "disease": "pseudomonas aeruginosa",
+        "active": true
+    },
+    {
+        "id": "118",
+        "disease": "psittacosis",
+        "active": true
+    },
+    {
+        "id": "48",
+        "disease": "q fever",
+        "active": true
+    },
+    {
+        "id": "49",
+        "disease": "rabies",
+        "active": true
+    },
+    {
+        "id": "166",
+        "disease": "Rat Bite Fever",
+        "active": true
+    },
+    {
+        "id": "94",
+        "disease": "respiratory syncytial virus",
+        "active": true
+    },
+    {
+        "id": "178",
+        "disease": "Rhinovirus",
+        "active": true
+    },
+    {
+        "id": "151",
+        "disease": "Rickettsia conorii ",
+        "active": true
+    },
+    {
+        "id": "152",
+        "disease": "Rickettsia japonica",
+        "active": true
+    },
+    {
+        "id": "50",
+        "disease": "rift valley fever",
+        "active": true
+    },
+    {
+        "id": "111",
+        "disease": "rocky mountain spotted fever",
+        "active": true
+    },
+    {
+        "id": "91",
+        "disease": "Ross River Fever",
+        "active": true
+    },
+    {
+        "id": "51",
+        "disease": "rotavirus infection",
+        "active": true
+    },
+    {
+        "id": "52",
+        "disease": "rubella",
+        "active": true
+    },
+    {
+        "id": "53",
+        "disease": "salmonellosis",
+        "active": true
+    },
+    {
+        "id": "149",
+        "disease": "sapovirus",
+        "active": true
+    },
+    {
+        "id": "168",
+        "disease": "sarbecovirus (unspecified)",
+        "active": true
+    },
+    {
+        "id": "54",
+        "disease": "SARS-CoV-1",
+        "active": true
+    },
+    {
+        "id": "109",
+        "disease": "scabies",
+        "active": true
+    },
+    {
+        "id": "192",
+        "disease": "Schistosomiasis",
+        "active": true
+    },
+    {
+        "id": "104",
+        "disease": "Scrub typhus",
+        "active": true
+    },
+    {
+        "id": "185",
+        "disease": "Serratia marcescens",
+        "active": true
+    },
+    {
+        "id": "106",
+        "disease": "sheeppox",
+        "active": true
+    },
+    {
+        "id": "55",
+        "disease": "shigellosis",
+        "active": true
+    },
+    {
+        "id": "182",
+        "disease": "simian virus",
+        "active": true
+    },
+    {
+        "id": "56",
+        "disease": "smallpox",
+        "active": true
+    },
+    {
+        "id": "121",
+        "disease": "St. Louis encephalitis",
+        "active": true
+    },
+    {
+        "id": "57",
+        "disease": "staphylococcal enterotoxin b",
+        "active": true
+    },
+    {
+        "id": "82",
+        "disease": "Staphylococcus",
+        "active": true
+    },
+    {
+        "id": "126",
+        "disease": "Streptococcus suis",
+        "active": true
+    },
+    {
+        "id": "93",
+        "disease": "Syphilis",
+        "active": true
+    },
+    {
+        "id": "96",
+        "disease": "Tetanus",
+        "active": true
+    },
+    {
+        "id": "187",
+        "disease": "Theileriosis",
+        "active": true
+    },
+    {
+        "id": "105",
+        "disease": "trichinellosis ",
+        "active": true
+    },
+    {
+        "id": "195",
+        "disease": "Trypanosoma cruzi",
+        "active": true
+    },
+    {
+        "id": "59",
+        "disease": "tuberculosis",
+        "active": true
+    },
+    {
+        "id": "60",
+        "disease": "tularemia",
+        "active": true
+    },
+    {
+        "id": "58",
+        "disease": "typhoid fever",
+        "active": true
+    },
+    {
+        "id": "1",
+        "disease": "unknown",
+        "active": true
+    },
+    {
+        "id": "172",
+        "disease": "Usutu Virus",
+        "active": true
+    },
+    {
+        "id": "61",
+        "disease": "vaccinia",
+        "active": true
+    },
+    {
+        "id": "198",
+        "disease": "Valley Fever",
+        "active": true
+    },
+    {
+        "id": "156",
+        "disease": "vibriosis",
+        "active": true
+    },
+    {
+        "id": "63",
+        "disease": "west nile virus",
+        "active": true
+    },
+    {
+        "id": "176",
+        "disease": "Whipple disease",
+        "active": true
+    },
+    {
+        "id": "64",
+        "disease": "yellow fever",
+        "active": true
+    },
+    {
+        "id": "65",
+        "disease": "yersiniosis",
+        "active": true
+    },
+    {
+        "id": "66",
+        "disease": "zika",
+        "active": true
+    }
+]
