@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  async redirects(){
+  async redirects() {
     return [
       {
-        source:"/", 
-        destination:"/datasets",
-        permanent: false
+        source: "/",
+        destination: "/datasets",
+        permanent: false,
       },
     ];
   },

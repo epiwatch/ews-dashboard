@@ -6,7 +6,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-// import LocationOnIcon from "@mui/icons-material/LocationOn";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 import DatasetIcon from "@mui/icons-material/Dataset";
 import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
@@ -20,29 +20,32 @@ import dayjs from "dayjs";
 const drawerWidth = 256;
 
 const Routes = [
-  // {
-  //   name: "Map",
-  //   icon: LocationOnIcon,
-  //   path: "/map"
-  // },
   {
-    name: "Stats",
-    icon: SignalCellularAltIcon,
-    path: "/stats"
+    index: 0,
+    name: "Map",
+    icon: LocationOnIcon,
+    path: "/map",
   },
   {
+    index: 1,
+    name: "Stats",
+    icon: SignalCellularAltIcon,
+    path: "/stats",
+  },
+  {
+    index: 2,
     name: "Dataset",
     icon: DatasetIcon,
-    path: "/datasets"
-  }
+    path: "/datasets",
+  },
 ];
 
-
 const PublicLayout = ({ children }: any) => {
-
   const router = useRouter();
 
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
+  const matchRoute = Routes.filter((item) => item.path === router.route)[0]
+    .index;
+  const [selectedIndex, setSelectedIndex] = React.useState(matchRoute);
 
   const handleListItemClick = async (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>,
@@ -76,24 +79,38 @@ const PublicLayout = ({ children }: any) => {
           PaperProps={{
             sx: {
               backgroundColor: "rgb(25, 33, 76)",
-            }
+            },
           }}
         >
-          <Link href={"https://www.epiwatch.org/"} rel="epiwatch" target="_self" replace>
-            <Image className={styles.logo} src="https://www.epiwatch.org/general/epiwatch-logo-2.svg" width={210} height={150} alt="logo" priority />
+          <Link
+            href={"https://www.epiwatch.org/"}
+            rel="epiwatch"
+            target="_self"
+            replace
+          >
+            <Image
+              className={styles.logo}
+              src="https://www.epiwatch.org/general/epiwatch-logo-2.svg"
+              width={210}
+              height={150}
+              alt="logo"
+              priority
+            />
           </Link>
           <List className={styles.list}>
             {Routes.map((route, index) => (
-              <ListItem key={index} disablePadding >
+              <ListItem key={index} disablePadding>
                 <ListItemButton
                   selected={selectedIndex === index}
                   sx={{
                     "&.Mui-selected": {
                       backgroundColor: "rgb(250, 250, 250,.30)",
                     },
-                  }} onClick={(event) => handleListItemClick(event, index)} >
+                  }}
+                  onClick={(event) => handleListItemClick(event, index)}
+                >
                   <ListItemIcon sx={{ color: "white" }}>
-                    < route.icon />
+                    <route.icon />
                   </ListItemIcon>
                   <ListItemText sx={{ color: "white" }} primary={route.name} />
                 </ListItemButton>
@@ -102,19 +119,21 @@ const PublicLayout = ({ children }: any) => {
 
             <div className={styles.info}>
               <InfoOutlinedIcon className={styles.infoIcon} />
-              <span>Dashboard data limited from {dayjs().format("YYYY-MM-DD")}</span>
+              <span>
+                Dashboard data limited from {dayjs().format("YYYY-MM-DD")}
+              </span>
             </div>
           </List>
         </Drawer>
 
         <Box
           component="main"
-          sx={{ flexGrow: 1, bgcolor: "background.default", p: 3 }}
+          sx={{ flexGrow: 1, bgcolor: "background.default" }}
         >
           {children}
         </Box>
-      </Box >
-    </div >
+      </Box>
+    </div>
   );
 };
 

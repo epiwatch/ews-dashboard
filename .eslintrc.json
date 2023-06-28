@@ -1,20 +1,23 @@
 {
-  "extends": "next/core-web-vitals",
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "next/core-web-vitals"
+  ],
   "rules": {
-    "quotes": [
-      "warn",
-      "double"
-    ],
-    "semi": [
-      "warn",
-      "always"
-    ],
-    "indent": [
-      "warn",
-      2
-    ],
-    "no-multi-spaces": [
-      "warn"
-    ]
+    "semi": ["warn", "always"],
+    "indent": ["warn", 2],
+    "no-multi-spaces": ["warn"],
+    "no-prototype-builtins": ["off"],
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-implicit-any-catch": "warn",
+    "@typescript-eslint/strict-boolean-expressions": "warn",
+    "@typescript-eslint/no-var-requires": "warn"
   }
 }

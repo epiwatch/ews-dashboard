@@ -1,7 +1,9 @@
 ## Project Declared License
+
 See EPIWATCH Open Public Dashboard's [LICENSE](LICENSE) file for primary license information.
 
 ## License Summary
+
 This project is under Apache-2.0 and uses (license compatible) packages under MIT licenses.
 
 ## Direct Dependencies

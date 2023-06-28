@@ -1,13 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 
-type Report = {
-	id: number;
-	diseases?: string | null;
-	syndromes?: string | null;
-	location: string;
-	date: string;
-};
+import { Report } from "@/types";
 
 const reports: Report[] = [
   {
@@ -35,7 +29,7 @@ const reports: Report[] = [
 
 export default function handler(
   _req: NextApiRequest,
-  res: NextApiResponse<Report[]>
+  res: NextApiResponse<Report[]>,
 ) {
   res.status(200).json(reports);
 }

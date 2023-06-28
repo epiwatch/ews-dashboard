@@ -10,25 +10,23 @@ import { BarChartProps } from "@/types";
 ChartJS.register(BarElement);
 
 export default function BarChart({ title, datasets, labels }: BarChartProps) {
-
   const options = {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
       legend: {
-        display: false
-      }
+        display: false,
+      },
     },
     scales: {
       x: {
-        stacked: true
+        stacked: true,
       },
       y: {
         stacked: true,
-        grace: "5%"
-      }
+        grace: "5%",
+      },
     },
-
   };
 
   return (
@@ -40,15 +38,16 @@ export default function BarChart({ title, datasets, labels }: BarChartProps) {
             {title}
           </Typography>
           <div style={{ height: "300px" }}>
-            <Bar data={{
-              labels,
-              datasets
-            }} options={options}
+            <Bar
+              data={{
+                labels,
+                datasets,
+              }}
+              options={options}
             />
           </div>
         </CardContent>
       </Card>
     </Grid>
   );
-};
-
+}

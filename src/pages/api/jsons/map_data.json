@@ -1,0 +1,246 @@
+[
+    {
+        "country_name": "United States",
+        "iso3": "USA",
+        "lat": "38.88950000000000000000",
+        "long": "-77.03200000000000000000",
+        "report_count": 149,
+        "filter_term": {},
+        "diseases": {
+            "Powassan Virus infection": 17,
+            "pseudomonas aeruginosa": 36,
+            "legionnaires": 7,
+            "salmonellosis": 4,
+            "mad cow disease": 25,
+            "Group A Streptococcus": 1,
+            "rabies": 8,
+            "cyclosporiasis": 2,
+            "norovirus": 7,
+            "west nile virus": 4,
+            "influenza a/h5n1": 3,
+            "Naegleria fowleri": 1,
+            "measles": 3,
+            "monkeypox": 8,
+            "covid19": 3,
+            "Syphilis": 1,
+            "tuberculosis": 1,
+            "hepatitis a": 4,
+            "other": 7,
+            "Blastomycosis": 1,
+            "avian influenza/unspecified": 1,
+            "gonorrhea": 2,
+            "varicella": 1,
+            "Eastern Equine Encephalitis ": 2
+        },
+        "syndromes": {
+            "Meningitis": 2
+        }
+    },
+    {
+        "country_name": "Brazil",
+        "iso3": "BRA",
+        "lat": "-15.78010000000000000000",
+        "long": "-47.92920000000000000000",
+        "report_count": 107,
+        "filter_term": {},
+        "diseases": {
+            "avian influenza/unspecified": 56,
+            "chikungunya": 3,
+            "dengue": 7,
+            "influenza a/h5n1": 31,
+            "influenza a/h1n1": 3,
+            "influenza": 2,
+            "Candida ": 1,
+            "zika": 2,
+            "tuberculosis": 1,
+            "covid19": 1
+        },
+        "syndromes": {}
+    },
+    {
+        "country_name": "Pakistan",
+        "iso3": "PAK",
+        "lat": "30.51670000000000000000",
+        "long": "72.80000000000000000000",
+        "report_count": 27,
+        "filter_term": {},
+        "diseases": {
+            "monkeypox": 6,
+            "covid19": 14,
+            "typhoid fever": 1,
+            "dengue": 4,
+            "MERS": 1,
+            "crimean-congo haemorrhagic fever": 1
+        },
+        "syndromes": {}
+    },
+    {
+        "country_name": "China",
+        "iso3": "CHN",
+        "lat": "40.04950000000000000000",
+        "long": "116.28600000000000000000",
+        "report_count": 22,
+        "filter_term": {},
+        "diseases": {
+            "monkeypox": 1,
+            "covid19": 13,
+            "malaria": 1,
+            "hepatitis a": 1,
+            "norovirus": 3,
+            "influenza": 2,
+            "tuberculosis": 1,
+            "listeriosis": 1,
+            "hantavirus": 1
+        },
+        "syndromes": {
+            "Acute gastroenteritis": 1
+        }
+    },
+    {
+        "country_name": "Russian Federation",
+        "iso3": "RUS",
+        "lat": "55.75580000000000000000",
+        "long": "37.61760000000000000000",
+        "report_count": 83,
+        "filter_term": {},
+        "diseases": {
+            "avian influenza/unspecified": 16,
+            "influenza": 3,
+            "SARS-CoV-1": 1,
+            "varicella": 2,
+            "norovirus": 1,
+            "rotavirus infection": 1,
+            "measles": 6,
+            "rabies": 7,
+            "botulism": 3,
+            "brucellosis": 12,
+            "hiv/aids": 1,
+            "covid19": 14,
+            "influenza a/h1n1": 1,
+            "hepatitis a": 5,
+            "influenza a/h5n1": 2,
+            "hepatitis (unspecified)": 1,
+            "Syphilis": 1,
+            "ehec (e.coli)": 1,
+            "typhoid fever": 1,
+            "campylobacteriosis": 1,
+            "Staphylococcus": 1,
+            "African Swine Fever": 2
+        },
+        "syndromes": {
+            "severe acute respiratory syndrome": 1
+        }
+    },
+    {
+        "country_name": "Japan",
+        "iso3": "JPN",
+        "lat": "35.67000000000000000000",
+        "long": "139.77000000000000000000",
+        "report_count": 33,
+        "filter_term": {},
+        "diseases": {
+            "Syphilis": 4,
+            "measles": 2,
+            "influenza": 11,
+            "tuberculosis": 6,
+            "botulism": 1,
+            "shigellosis": 3,
+            "monkeypox": 1,
+            "norovirus": 3,
+            "respiratory syncytial virus": 1,
+            "other": 1
+        },
+        "syndromes": {}
+    },
+    {
+        "country_name": "South Africa",
+        "iso3": "ZAF",
+        "lat": "-25.74600000000000000000",
+        "long": "28.18710000000000000000",
+        "report_count": 77,
+        "filter_term": {},
+        "diseases": {
+            "cholera": 62,
+            "diphtheria": 6,
+            "measles": 2,
+            "mumps": 5,
+            "malaria": 2
+        },
+        "syndromes": {}
+    },
+    {
+        "country_name": "Kazakhstan",
+        "iso3": "KAZ",
+        "lat": "51.18790000000000000000",
+        "long": "71.43820000000000000000",
+        "report_count": 6,
+        "filter_term": {},
+        "diseases": {
+            "varicella": 1,
+            "rabies": 2,
+            "brucellosis": 3
+        },
+        "syndromes": {}
+    },
+    {
+        "country_name": "Mexico",
+        "iso3": "MEX",
+        "lat": "19.42700000000000000000",
+        "long": "-99.12760000000000000000",
+        "report_count": 13,
+        "filter_term": {},
+        "diseases": {
+            "varicella": 1,
+            "influenza": 1,
+            "influenza a/h5n1": 2,
+            "monkeypox": 2,
+            "hiv/aids": 2,
+            "rotavirus infection": 2,
+            "other": 2,
+            "covid19": 1
+        },
+        "syndromes": {}
+    },
+    {
+        "country_name": "India",
+        "iso3": "IND",
+        "lat": "28.63530000000000000000",
+        "long": "77.22500000000000000000",
+        "report_count": 92,
+        "filter_term": {},
+        "diseases": {
+            "dengue": 26,
+            "unknown": 3,
+            "covid19": 34,
+            "Lumpy skin disease": 14,
+            "malaria": 3,
+            "chikungunya": 4,
+            "measles": 1,
+            "varicella": 3,
+            "hepatitis b": 1,
+            "rabies": 1,
+            "other": 1,
+            "typhoid fever": 1
+        },
+        "syndromes": {
+            "pneumonia": 1,
+            "Acute gastroenteritis": 1,
+            "Febrile syndromes": 1,
+            "Encephalitis ": 1
+        }
+    },
+    {
+        "country_name": "Australia",
+        "iso3": "AUS",
+        "lat": "-35.28200000000000000000",
+        "long": "149.12900000000000000000",
+        "report_count": 13,
+        "filter_term": {},
+        "diseases": {
+            "covid19": 9,
+            "influenza": 2,
+            "Murray Valley Encephalitis": 2
+        },
+        "syndromes": {}
+    }
+]

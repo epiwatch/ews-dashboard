@@ -2,11 +2,11 @@ import { CheckArrayType, SelectionType, InputDataType } from "@/types";
 
 export const transferColorProperty = (
   checkArray: Array<CheckArrayType>,
-  selections: Array<SelectionType>
+  selections: Array<SelectionType>,
 ) => {
   return checkArray.map((checkObj: CheckArrayType) => {
     const matchingObj = selections.find(
-      (selectedObj: SelectionType) => selectedObj.label === checkObj.label
+      (selectedObj: SelectionType) => selectedObj.label === checkObj.label,
     );
     if (matchingObj) {
       return { ...checkObj, backgroundColor: matchingObj.color };

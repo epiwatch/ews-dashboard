@@ -1,14 +1,14 @@
 .info {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    color: #fff;
-    padding: 8px 16px;
-    position: absolute;
-    bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+  padding: 8px 16px;
+  position: absolute;
+  bottom: 0;
 }
 
-.infoIcon{
+.infoIcon {
   margin-right: 32px;
 }
 
@@ -16,7 +16,6 @@
   padding: 0 24px;
 }
 
-.list{
+.list {
   height: 100vh;
 }
-

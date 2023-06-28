@@ -9,14 +9,18 @@ import { PieChartProps } from "@/types";
 
 ChartJS.register(BarElement);
 
-export default function PieChart({ title, subTitle, datasets, labels }: PieChartProps) {
-
+export default function PieChart({
+  title,
+  subTitle,
+  datasets,
+  labels,
+}: PieChartProps) {
   const options = {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
       legend: {
-        display: false
+        display: false,
       },
 
       tooltip: {
@@ -26,13 +30,13 @@ export default function PieChart({ title, subTitle, datasets, labels }: PieChart
           label: (context: any) => {
             return `${context.label}` + ": " + `${context.parsed}`;
           },
-          // Return an empty string, so that we can display label only  
+          // Return an empty string, so that we can display label only
           title: () => {
             return "";
           },
-        }
+        },
       },
-    }
+    },
   };
 
   return (
@@ -47,15 +51,16 @@ export default function PieChart({ title, subTitle, datasets, labels }: PieChart
             {subTitle}
           </Typography>
           <div style={{ height: "300px" }}>
-            <Pie data={{
-              labels,
-              datasets,
-            }} options={options}
+            <Pie
+              data={{
+                labels,
+                datasets,
+              }}
+              options={options}
             />
           </div>
         </CardContent>
       </Card>
     </Grid>
   );
-};
-
+}

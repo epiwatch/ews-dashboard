@@ -5,7 +5,7 @@ import { Disease } from "@/types";
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Disease[]>
+  res: NextApiResponse<Disease[]>,
 ) {
   res.status(200).json(diseases);
 }

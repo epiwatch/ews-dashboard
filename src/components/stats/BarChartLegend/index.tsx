@@ -10,25 +10,29 @@ import { BarChartLegendProps } from "@/types";
 ChartJS.register(Legend);
 
 export default function BarChartLegend({ data }: BarChartLegendProps) {
-
   return (
     <Grid xs={12} md={2}>
       <Card className={styles.legendContainer}>
-        {data.length < 0 && < LinearProgress />}
-        <CardContent >
-          <Typography variant="h6" component="div" className={styles.legendTitle}>
+        {data.length < 0 && <LinearProgress />}
+        <CardContent>
+          <Typography
+            variant="h6"
+            component="div"
+            className={styles.legendTitle}
+          >
             Legend
           </Typography>
           {data.map((item, idx) => (
             <div className={styles.legendItemContainer} key={idx}>
-              <div className={styles.legendSquare} style={{ backgroundColor: item.backgroundColor }} />
-              <span className={styles.legendItem} >{item.label}</span>
+              <div
+                className={styles.legendSquare}
+                style={{ backgroundColor: item.backgroundColor }}
+              />
+              <span className={styles.legendItem}>{item.label}</span>
             </div>
-          )
-          )}
+          ))}
         </CardContent>
-      </Card >
-    </Grid >
+      </Card>
+    </Grid>
   );
 }
-

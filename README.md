@@ -11,10 +11,10 @@ SPDX-License-Identifier: Apache-2.0
     <img src="public/epiwatch-logo.svg" alt="EPIWATCH Logo" width="120" height="120">
   </a>
 
-<h3 align="center">EPIWATCH™️ Open Public Dashboard</h3>
+<h3 align="center">EPIWATCH&reg; Open Public Dashboard</h3>
 
   <p align="center">
-    EPIWATCH™️ is an artificial intelligence-driven open-source outbreak observatory for early outbreak warnings (including infectious disease epidemics) and rapid risk analysis.
+    EPIWATCH&reg; is an artificial intelligence-driven open-source outbreak observatory for early outbreak warnings (including infectious disease epidemics) and rapid risk analysis.
     <br />
     <br />
     Supported by the Balvi Filanthropic Fund's Shiba Inu Initiative, we'll be progressively open sourcing much of the codebase, starting with an <em>EPIWATCH Open Dashboard</em> project here. This code will be based on the <a href="https://www.epiwatch.org/reports">EPIWATCH Public Dashboard</a> (a managed service operated by the EPIWATCH Team at UNSW's Biosecurity Program).

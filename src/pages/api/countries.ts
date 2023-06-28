@@ -5,7 +5,7 @@ import { Country } from "@/types";
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Country[]>
+  res: NextApiResponse<Country[]>,
 ) {
   res.status(200).json(countries);
 }

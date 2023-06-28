@@ -1,148 +1,130 @@
 {
-    "reportDiseasesInLocation": {
-        "payload": {
-            "filters": {
-                "start_date": "2023-04-02",
-                "end_date": "2023-05-02",
-                "country_id": "11"
-            }
-        },
-        "response": {
-            "measles": 12,
-            "Murray Valley Encephalitis": 6,
-            "meningococcal": 5,
-            "Tetanus": 4,
-            "covid19": 4,
-            "Japanese Encephalitis": 3,
-            "unknown": 2,
-            "influenza": 1,
-            "avian influenza/unspecified": 1
-        }
+  "reportDiseasesInLocation": {
+    "payload": {
+      "filters": {
+        "start_date": "2023-04-02",
+        "end_date": "2023-05-02",
+        "country_id": "11"
+      }
     },
-    "reportIllnessesInRegion": {
-        "payload": {
-            "start_date": "2023-04-02",
-            "end_date": "2023-05-02",
-            "country_ids": [
-                "11",
-                "216",
-                "217",
-                "145",
-                "221"
-            ]
-        },
-        "response": {
-            "avian influenza/unspecified": 1,
-            "covid19": 5,
-            "influenza": 1,
-            "Influenza-like illness": 1,
-            "Japanese Encephalitis": 3,
-            "measles": 12,
-            "meningococcal": 5,
-            "Murray Valley Encephalitis": 6,
-            "pertussis": 5,
-            "rabies": 10,
-            "Tetanus": 4,
-            "unknown": 2
-        }
-    },
-    "reportDiseasesInRangeNew": {
-        "payload": {
-            "filters": {
-                "start_date": "2023-04-02",
-                "end_date": "2023-05-02",
-                "country_ids": [
-                    "11"
-                ],
-                "disease_ids": [
-                    "39",
-                    "132",
-                    "131",
-                    "96",
-                    "10",
-                    "120",
-                    "1",
-                    "71",
-                    "73"
-                ]
-            }
-        },
-        "response": {
-            "2023-04-02": {
-                "meningococcal": 1
-            },
-            "2023-04-03": {
-                "meningococcal": 2,
-                "unknown": 1
-            },
-            "2023-04-04": {
-                "measles": 3,
-                "Murray Valley Encephalitis": 1,
-                "unknown": 1
-            },
-            "2023-04-05": {
-                "meningococcal": 1,
-                "Murray Valley Encephalitis": 1
-            },
-            "2023-04-06": {
-                "measles": 2,
-                "Murray Valley Encephalitis": 3
-            },
-            "2023-04-07": {
-                "measles": 1
-            },
-            "2023-04-08": {
-                "avian influenza/unspecified": 1,
-                "measles": 2,
-                "Murray Valley Encephalitis": 1
-            },
-            "2023-04-09": null,
-            "2023-04-10": null,
-            "2023-04-11": {
-                "covid19": 1
-            },
-            "2023-04-12": null,
-            "2023-04-13": {
-                "meningococcal": 1,
-                "Tetanus": 2
-            },
-            "2023-04-14": {
-                "influenza": 1,
-                "measles": 1,
-                "Tetanus": 1
-            },
-            "2023-04-15": {
-                "Tetanus": 1
-            },
-            "2023-04-16": null,
-            "2023-04-17": {
-                "measles": 1
-            },
-            "2023-04-18": {
-                "measles": 1
-            },
-            "2023-04-19": {
-                "covid19": 1
-            },
-            "2023-04-20": {
-                "measles": 1
-            },
-            "2023-04-21": {
-                "Japanese Encephalitis": 3
-            },
-            "2023-04-22": null,
-            "2023-04-23": null,
-            "2023-04-24": null,
-            "2023-04-25": null,
-            "2023-04-26": null,
-            "2023-04-27": null,
-            "2023-04-28": null,
-            "2023-04-29": {
-                "covid19": 2
-            },
-            "2023-04-30": null,
-            "2023-05-01": null,
-            "2023-05-02": null
-        }
+    "response": {
+      "measles": 12,
+      "Murray Valley Encephalitis": 6,
+      "meningococcal": 5,
+      "Tetanus": 4,
+      "covid19": 4,
+      "Japanese Encephalitis": 3,
+      "unknown": 2,
+      "influenza": 1,
+      "avian influenza/unspecified": 1
     }
+  },
+  "reportIllnessesInRegion": {
+    "payload": {
+      "start_date": "2023-04-02",
+      "end_date": "2023-05-02",
+      "country_ids": ["11", "216", "217", "145", "221"]
+    },
+    "response": {
+      "avian influenza/unspecified": 1,
+      "covid19": 5,
+      "influenza": 1,
+      "Influenza-like illness": 1,
+      "Japanese Encephalitis": 3,
+      "measles": 12,
+      "meningococcal": 5,
+      "Murray Valley Encephalitis": 6,
+      "pertussis": 5,
+      "rabies": 10,
+      "Tetanus": 4,
+      "unknown": 2
+    }
+  },
+  "reportDiseasesInRangeNew": {
+    "payload": {
+      "filters": {
+        "start_date": "2023-04-02",
+        "end_date": "2023-05-02",
+        "country_ids": ["11"],
+        "disease_ids": ["39", "132", "131", "96", "10", "120", "1", "71", "73"]
+      }
+    },
+    "response": {
+      "2023-04-02": {
+        "meningococcal": 1
+      },
+      "2023-04-03": {
+        "meningococcal": 2,
+        "unknown": 1
+      },
+      "2023-04-04": {
+        "measles": 3,
+        "Murray Valley Encephalitis": 1,
+        "unknown": 1
+      },
+      "2023-04-05": {
+        "meningococcal": 1,
+        "Murray Valley Encephalitis": 1
+      },
+      "2023-04-06": {
+        "measles": 2,
+        "Murray Valley Encephalitis": 3
+      },
+      "2023-04-07": {
+        "measles": 1
+      },
+      "2023-04-08": {
+        "avian influenza/unspecified": 1,
+        "measles": 2,
+        "Murray Valley Encephalitis": 1
+      },
+      "2023-04-09": null,
+      "2023-04-10": null,
+      "2023-04-11": {
+        "covid19": 1
+      },
+      "2023-04-12": null,
+      "2023-04-13": {
+        "meningococcal": 1,
+        "Tetanus": 2
+      },
+      "2023-04-14": {
+        "influenza": 1,
+        "measles": 1,
+        "Tetanus": 1
+      },
+      "2023-04-15": {
+        "Tetanus": 1
+      },
+      "2023-04-16": null,
+      "2023-04-17": {
+        "measles": 1
+      },
+      "2023-04-18": {
+        "measles": 1
+      },
+      "2023-04-19": {
+        "covid19": 1
+      },
+      "2023-04-20": {
+        "measles": 1
+      },
+      "2023-04-21": {
+        "Japanese Encephalitis": 3
+      },
+      "2023-04-22": null,
+      "2023-04-23": null,
+      "2023-04-24": null,
+      "2023-04-25": null,
+      "2023-04-26": null,
+      "2023-04-27": null,
+      "2023-04-28": null,
+      "2023-04-29": {
+        "covid19": 2
+      },
+      "2023-04-30": null,
+      "2023-05-01": null,
+      "2023-05-02": null
+    }
+  }
 }
