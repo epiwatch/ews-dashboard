@@ -3,7 +3,6 @@ import { useState } from "react";
 
 import MapSetting from "./subcomponents/MapSetting";
 import DateToggle from "./subcomponents/DateToggle";
-import DiseasesFilter from "./subcomponents/DiseasesFilter";
 import Legend from "./subcomponents/Legend";
 
 export default function MapFilter() {
@@ -39,7 +38,6 @@ export default function MapFilter() {
     <div className={styles.filterContainer}>
       <MapSetting />
       <DateToggle />
-      <DiseasesFilter />
       {/*<Legend />*/}
     </div>
   );
