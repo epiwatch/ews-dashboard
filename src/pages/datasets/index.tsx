@@ -1,42 +1,59 @@
-import { useMemo } from "react";
-import type {
-  GetServerSidePropsContext,
-  InferGetServerSidePropsType,
-} from "next";
+import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { AgGridReact } from "ag-grid-react"; // the AG Grid React Component
-
 import styles from "@/styles/Home.module.css";
 import "ag-grid-community/styles/ag-grid.css"; // Core grid CSS, always needed
 import "ag-grid-community/styles/ag-theme-alpine.css"; // Optional theme CSS
+import { OutputDataType } from "@/types";
+import { RowSelectedEvent } from "ag-grid-community";
+import { AG_GRID_LOCALE_EN } from "../../locales/en/ag-grid.locale.en";
+import { AG_GRID_LOCALE_HI } from "../../locales/hi/ag-grid.locale.hi";
+import { useTranslation } from "react-i18next";
+import { checkLang } from "@/components/utils/dataUtils";
+
+const ag_locales = {
+  en: AG_GRID_LOCALE_EN,
+  hi: AG_GRID_LOCALE_HI
+};
 
 const gridOptionsComponents = {
-  colWithLoader: (params: any) => {
+  colWithLoader: (params: OutputDataType) => {
     if (params.value !== undefined) {
       return params.value;
     } else {
       return <Image src="/loader.gif" width={20} height={20} alt="loading" />;
     }
   },
-  titleLinkCell: (params: any) => {
-    if (params.value) {
-      return (
-        <a
-          className={styles.rowLink}
-          target="_blank"
-          href={encodeURI(params.data.url)}
-        >
-          {params.value}
-        </a>
-      );
-    }
-    return "";
-  },
 };
 
-export default function Dataset({
-  rowData,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+export default function Dataset() {
+  const [rowData, setRowData] = useState([]);
+  const { t, i18n } = useTranslation();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [localeText, setLocaleText] = useState<any>(null);
+
+  const onGridReady = (params: RowSelectedEvent) => {
+    params.api.showLoadingOverlay(); // Initially show loading overlay
+  };
+
+  useEffect(() => {
+    initialLoad();
+  }, []);
+
+  const initialLoad = async () => {
+    try {
+      checkLang(i18n);
+      setLocaleText(ag_locales[i18n.language as keyof typeof ag_locales]);
+      const fetch_res = await fetch(
+        process.env.NEXT_PUBLIC_API_URL + `/reports?lang=${i18n.language}`
+      );
+      const rowDataObj = await fetch_res.json();
+      setRowData(rowDataObj);
+    } catch (e: unknown) {
+      console.log(e);
+    }
+  };
+
   const gridOptions = useMemo(
     () => ({
       components: gridOptionsComponents,
@@ -68,7 +85,7 @@ export default function Dataset({
         field: "date",
         width: 180,
         cellRenderer: "colWithLoader",
-        headerName: "Date",
+        headerName: t("dataset.date_tag"),
         filter: "agDateColumnFilter",
         filterParams: {
           buttons: ["apply", "reset"],
@@ -102,37 +119,27 @@ export default function Dataset({
             }
             return 0;
           },
-        },
-        // sort: 'asc'
+        }
       },
-      { field: "diseases", flex: 1 },
-      { field: "syndromes", flex: 1 },
-      { field: "location", flex: 2 },
+      { field: "diseases", headerName: t("dataset.diseases_tag"), flex: 1 },
+      { field: "syndromes", headerName: t("dataset.syndromes_tag"), flex: 1 },
+      { field: "location", headerName: t("dataset.location_tag"), flex: 2 },
     ],
-    [],
+    [t],
   );
 
   return (
-    <div className={`ag-theme-alpine ${styles.reportsTable}`}>
+    <div className={`ag-theme-alpine ${styles.reportsTable} body-borderless`}>
       <AgGridReact
+        onGridReady={onGridReady}
         rowData={rowData} // Row Data for Rows
         columnDefs={columnDefs} // Column Defs for Columns
         defaultColDef={defaultColDef} // Default Column Properties
         gridOptions={gridOptions}
         suppressMultiSort={true}
         animateRows={true} // Optional - set to 'true' to have rows animate when sorted
+        localeText={localeText}
       />
     </div>
   );
-}
-
-export async function getServerSideProps(context: GetServerSidePropsContext) {
-  context.res.setHeader(
-    "Cache-Control",
-    "public, s-maxage=900, stale-while-revalidate=1000",
-  );
-  const fetch_res = await fetch(process.env.NEXT_PUBLIC_API_URL + "/reports");
-  const rowData = await fetch_res.json();
-
-  return { props: { rowData } };
 }

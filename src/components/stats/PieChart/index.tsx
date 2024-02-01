@@ -27,7 +27,9 @@ export default function PieChart({
         titleMarginBottom: 0,
         displayColors: false,
         callbacks: {
-          label: (context: any) => {
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-ignore
+          label: (context) => {
             return `${context.label}` + ": " + `${context.parsed}`;
           },
           // Return an empty string, so that we can display label only
@@ -42,7 +44,7 @@ export default function PieChart({
   return (
     <Grid xs={12} md={6}>
       <Card>
-        {!datasets && <LinearProgress />}
+        {datasets.length === 0 && <LinearProgress />}
         <CardContent>
           <Typography variant="h6" component="div">
             {title}

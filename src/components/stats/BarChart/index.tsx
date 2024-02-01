@@ -32,7 +32,7 @@ export default function BarChart({ title, datasets, labels }: BarChartProps) {
   return (
     <Grid xs={12} md={10}>
       <Card>
-        {!datasets && <LinearProgress />}
+        {datasets.length === 0 && <LinearProgress />}
         <CardContent>
           <Typography variant="h6" component="div">
             {title}

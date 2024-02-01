@@ -1,15 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  async redirects() {
-    return [
-      {
-        source: "/",
-        destination: "/datasets",
-        permanent: false,
-      },
-    ];
+  output: "export",
+  images: {
+    unoptimized: true,
   },
+  trailingSlash: true
 };
 
 module.exports = nextConfig;

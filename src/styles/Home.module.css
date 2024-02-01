@@ -6,3 +6,155 @@
 .reportsTable {
   height: 97vh;
 }
+
+.box {
+  margin-left: 220px;
+  display: flex;
+  max-width: 100%;
+  height: calc(100vh - 4em);
+  min-height: calc(100% - 4em);
+  overflow: hidden;
+}
+
+.container {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+
+  background-image: linear-gradient(to right,
+      rgba(255, 255, 255, 1) 1%,
+      rgba(128, 128, 128, 0) 30%),
+    url("../../public/images/vision-hs.png");
+  background-repeat: no-repeat;
+  margin-left: 4%;
+  min-width: 60%;
+  position: relative;
+}
+
+.imageContainer {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.textSection {
+  margin-top: 15%;
+  min-width: 30%;
+
+  position: relative;
+  margin-right: -50px;
+  padding: 50px;
+  color: black;
+}
+
+.titleSection {
+  font-weight: bolder;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif !important;
+  line-height: 1.3;
+  word-spacing: 5px;
+  margin-bottom: 20px !important;
+}
+
+@media (max-width: 1200px) {
+  .titleSection {
+    margin-left: 25%;
+  }
+
+  .textSection {
+    margin-bottom: 8%;
+  }
+
+  .box {
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    height: 100%;
+
+  }
+
+  .container {
+    min-width: 70%;
+    margin-right: -10%;
+    margin-left: -270px;
+  }
+}
+
+@media (min-width: 1055px) {
+  .titleSection {
+    font-size: 3rem !important;
+  }
+}
+
+@media (max-width: 1055px) {
+  .titleSection {
+    font-size: 2rem !important;
+  }
+}
+
+@media (max-height: 850px) {
+  .titleSection {
+    font-size: 2.6rem !important;
+  }
+
+  .paraSection {
+    font-size: 1.4em !important;
+  }
+
+  @media (max-width: 1440px) {
+    .titleSection {
+      font-size: 2.3rem !important;
+    }
+  }
+}
+
+@media (max-height: 822px) {
+  .titleSection {
+    font-size: 2.2rem !important;
+  }
+}
+
+@media (max-height: 808px) {
+  .titleSection {
+    font-size: 2.0rem !important;
+    /*width: 30%;*/
+  }
+
+  .paraSection {
+    font-size: 1.3em !important;
+  }
+}
+
+@media (max-height: 769px) {
+  .titleSection {
+    font-size: 2.1rem !important;
+  }
+
+  .paraSection {
+    font-size: 1.2em !important;
+  }
+
+}
+
+@media (max-height: 708px) {
+  .titleSection {
+    font-size: 1.8rem !important;
+  }
+}
+
+.paraSection {
+  margin-top: 20px !important;
+  max-width: 70%;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 1.5em;
+}
+
+.centerSection {
+  align-self: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}

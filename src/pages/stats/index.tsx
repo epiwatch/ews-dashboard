@@ -1,9 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
-import type {
-  GetServerSidePropsContext,
-  InferGetServerSidePropsType,
-} from "next";
 import {
   Chart as ChartJS,
   ArcElement,
@@ -17,71 +13,57 @@ import CardContent from "@mui/material/CardContent";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 import { Button, FormGroup, FormControlLabel, Switch } from "@mui/material";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import LinearProgress from "@mui/material/LinearProgress";
 import dayjs, { Dayjs } from "dayjs";
 import styles from "@/styles/Stats.module.css";
-import {
-  LegendColours,
-  DateFormat,
-  FetchDataDateFormat,
-} from "../../components/utils/constant";
-import BarChart from "../../components/stats/BarChart";
-import PieChart from "../../components/stats/PieChart";
-import BarChartLegend from "../../components/stats/BarChartLegend";
+import { DateFormat, DefaultCountryId, DefaultDiseaseId, FetchDataDateFormat } from "@/components/utils/constant";
+import BarChart from "../../components/Stats/BarChart";
+import PieChart from "../../components/Stats/PieChart";
+import BarChartLegend from "../../components/Stats/BarChartLegend";
 import {
   transformData,
   transferColorProperty,
-} from "../../components/utils/dataUtils";
-
+  checkLang,
+} from "@/components/utils/dataUtils";
 import {
   Country,
   Disease,
   Syndrome,
-  DiseaseInLocations,
   PieChartDatasetsItem,
   BarChartDatasetsItem,
   BarChartLegendItem,
+  SelectionType,
+  Top10DiseasesType,
+  CheckArrayType,
 } from "@/types";
+import { useTranslation } from "react-i18next";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 
 ChartJS.register(ArcElement, Tooltip, CategoryScale, LinearScale);
-
-const getRandomColorIndex = (max: number) => {
-  return Math.floor(Math.random() * max);
-};
 
 const today = dayjs();
 const earliestStartDate = dayjs().subtract(30, "days");
 
-export default function Home({
-  countries,
-  diseases,
-  syndromes,
-  subregions,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  const defaultCountry = countries.filter(
-    (countryData: Country) => countryData.country_name === "Australia",
-  )[0];
-
-  const [country, setCountry] = useState<Country>(defaultCountry);
-  const [startDate, setStartDate] = useState<Dayjs | null>(earliestStartDate);
-  const [endDate, setEndDate] = useState<Dayjs | null>(today);
+export default function Home() {
+  const [countries, setCountries] = useState([]);
+  const [diseases, setDiseases] = useState([]);
+  const [syndromes, setSyndromes] = useState([]);
+  const [country, setCountry] = useState<Country | undefined>(undefined);
+  const [startDate, setStartDate] = useState<Dayjs>(earliestStartDate);
+  const [endDate, setEndDate] = useState<Dayjs>(today);
   const [selectedDiseases, setSelectedDiseases] = useState<Disease[]>([]);
   const [selectedSyndromes, setSelectedSyndromes] = useState<Syndrome[]>([]);
-  const [appliedSelections, setAppliedSelections] = useState<any[]>([]);
-  const [countryTitleText, setCountryTitleText] = useState<string>(
-    "Distribution within Australia",
+  const [appliedSelections, setAppliedSelections] = useState<SelectionType[]>(
+    [],
   );
-  const [regionTitleText, setRegionTitleText] = useState<string>(
-    "Distribution within Australia and New Zealand",
-  );
-  const [stackedBarChartTitle, setStackedBarChartTitle] = useState<string>(
-    "Reports for Australia",
-  );
-  const [autoTop10, setAutoTop10] = useState<boolean>(true);
-
+  const [disableApply, setDisableApply] = useState<boolean>(true);
+  const [autoTop10, setAutoTop10] = useState<boolean>(false);
+  const [initialLoad, setInitialLoad] = useState<boolean>(true);
+  const [countryTitleText, setCountryTitleText] = useState<string>("");
+  const [regionTitleText, setRegionTitleText] = useState<string>("");
+  const [stackedBarChartTitle, setStackedBarChartTitle] = useState<string>("");
   const [stackedBarChartLegend, setStackedBarChartLegend] = useState<
     Array<BarChartLegendItem>
   >([]);
@@ -105,109 +87,227 @@ export default function Home({
   const [countryRegionChartData, setRegionPieChartData] = useState<
     PieChartDatasetsItem[]
   >([]);
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
-    // initial load
-
-    // No need to handle Promise returned
-    updateCharts();
-
-    // Empty dependency array, so this function only run once during init
+    loadData();
   }, []);
 
   useEffect(() => {
-    // initial load
-    // No need to handle Promise returned
+    if (!initialLoad && autoTop10) {
+      setDisableApply(true);
+      getTop10Diseases();
+    }
+  }, [country, startDate, endDate]);
+
+  useEffect(() => {
+    const validDiseases = Array.isArray(diseases) && diseases.length > 0;
+    const validSyndromes = Array.isArray(syndromes) && syndromes.length > 0;
+    const validCountry =
+      typeof country === "object" &&
+      country !== null &&
+      Object.entries(country).length > 0;
+
+    if (validDiseases && validSyndromes && validCountry) {
+      setAutoTop10(true);
+    }
+  }, [countries, country, diseases, syndromes]);
+
+  useEffect(() => {
+    getCountryPieChartData();
     createStackedChart();
     getRegionalPieChartData();
+  }, [appliedSelections]);
 
-    // Run when countryPieChartData's value is updated
-    // Because we need to get data from reportDiseasesInLocation before running any fetch requests
-  }, [countryPieChartData]);
+  const loadData = async () => {
+    try {
+      checkLang(i18n);
+      const getCountries = () =>
+        Promise.resolve(
+          fetch(
+            process.env.NEXT_PUBLIC_API_URL + `/countries?lang=${i18n.language}`)
+            .then((res) => {
+              if (res !== null && res.status === 200) {
+                return res.json();
+              } else {
+                return null;
+              }
+            })
+            .then((obj) => {
+              if (obj !== null && obj.length > 0) {
+                setCountries(obj);
+                const defaultCountry = obj.filter(
+                  (countryData: Country) =>
+                    countryData.id == DefaultCountryId
+                );
+                if (defaultCountry !== null && defaultCountry.length > 0) {
+                  setCountry(defaultCountry[0]);
+                }
+              }
+            }),
+        );
+      const getDiseases = () =>
+        Promise.resolve(
+          fetch(process.env.NEXT_PUBLIC_API_URL + `/disease?lang=${i18n.language}`)
+            .then((res) => {
+              if (res !== null && res.status === 200) {
+                return res.json();
+              } else {
+                return null;
+              }
+            })
+            .then((obj) => {
+              if (obj !== null && obj.length > 0) {
+                const tempDiseases = obj.filter((el: Disease) => el.disease !== null);
+                setDiseases(tempDiseases);
+              }
+            }),
+        );
+      const getSyndromes = () =>
+        Promise.resolve(
+          fetch(process.env.NEXT_PUBLIC_API_URL + `/syndrome?lang=${i18n.language}`)
+            .then((res) => {
+              if (res !== null && res.status === 200) {
+                return res.json();
+              } else {
+                return null;
+              }
+            })
+            .then((obj) => {
+              if (obj !== null && obj.length > 0) {
+                setSyndromes(obj);
+              }
+            }),
+        );
 
-  const checkTop10Diseases = (diseaseData: DiseaseInLocations) => {
-    const newSelectedDiseases = [] as Disease[];
-    const diseaseArray: { name: string; count: number }[] = [];
-    for (const [disease, count] of Object.entries(diseaseData)) {
-      diseaseArray.push({ name: disease, count });
+      Promise.allSettled([
+        getCountries(),
+        getDiseases(),
+        getSyndromes()
+      ]);
+    } catch (e: unknown) {
+      console.log(e);
     }
+  };
 
-    // if "auto top 10 diseases" is turned on, we need to get all diseases for the current country
-    // and then find the top 10 from that list
+  useEffect(() => {
     if (autoTop10) {
-      diseaseArray.sort((a, b) => b.count - a.count).slice(0, 9);
+      setDisableApply(true);
+      getTop10Diseases();
     }
+  }, [autoTop10]);
 
-    diseaseArray.map((item) =>
-      newSelectedDiseases.push(
-        diseases.filter((d: Disease) => d.disease == item.name)[0],
-      ),
-    );
-    setSelectedDiseases(newSelectedDiseases);
+  useEffect(() => {
+    if (autoTop10 && selectedDiseases.length > 0 && disableApply) {
+      setDisableApply(false);
+      if (initialLoad) {
+        updateCharts();
+        setInitialLoad(false);
+      }
+    }
+  }, [selectedDiseases]);
 
-    // add the selected diseases and selected syndromes into 1 list
-    const appliedSelectionWithColor = newSelectedDiseases.map(
-      (item: any, idx) => {
-        return { label: item.disease, color: LegendColours[idx] };
-      },
-    );
+  const getUrlParams = (includeIllnesses: boolean) => {
+    let urlParams = "";
+    if (
+      typeof country === "object" &&
+      country !== null &&
+      Object.entries(country).length > 0
+    ) {
+      const dateStr = (date: Dayjs) => dayjs(date).format(FetchDataDateFormat);
+      const selectedDiseasesIds = selectedDiseases.map((el) => el.id);
+      const selectedSyndromesIds = selectedSyndromes.map((el) => el.id);
 
-    setAppliedSelections(appliedSelectionWithColor);
+      const illnessStr = (
+        illnessIdStr: string,
+        selectedIllnesses: (string | undefined)[],
+      ) => `&${illnessIdStr}=` + selectedIllnesses.join(`&${illnessIdStr}=`);
+      urlParams = `&country_id=${country.id}&start_date=${dateStr(
+        startDate,
+      )}&end_date=${dateStr(endDate)}`;
+      if (
+        includeIllnesses &&
+        selectedDiseases.length > 0 &&
+        selectedDiseases.length > 0
+      ) {
+        urlParams += illnessStr("disease_ids", selectedDiseasesIds);
+      }
+      if (
+        includeIllnesses &&
+        selectedDiseases.length > 0 &&
+        selectedSyndromes.length > 0
+      ) {
+        urlParams += illnessStr("syndrome_ids", selectedSyndromesIds);
+      }
+    }
+    return urlParams;
+  };
 
-    return appliedSelectionWithColor;
+  const getTop10Diseases = async () => {
+    fetch(process.env.NEXT_PUBLIC_API_URL +
+      `/countryTop10Diseases?lang=${i18n.language}${getUrlParams(false)}`)
+      .then((res) => {
+        if (res.status === 200) {
+          return res.json();
+        }
+      })
+      .then((newTop10Diseases) => {
+        const newSelectedDiseases = [] as Disease[];
+        if (newTop10Diseases.length == 0) {
+          newTop10Diseases = [{ id: DefaultDiseaseId }];
+        }
+
+        newTop10Diseases.forEach((item: Top10DiseasesType) =>
+          newSelectedDiseases.push(
+            diseases.filter((d: Disease) => d.id == String(item.id))[0],
+          ),
+        );
+        setSelectedDiseases(newSelectedDiseases);
+      })
+      .catch((error) => console.log(error));
   };
 
   const createStackedChart = async () => {
-    const rangePayload = {
-      filters: {
-        country_ids: country.id,
-        diseases_ids: selectedDiseases,
-        end_date: dayjs().format(FetchDataDateFormat),
-        start_date: dayjs().subtract(30, "days").format(FetchDataDateFormat),
-      },
-    };
-
-    await fetch(process.env.NEXT_PUBLIC_API_URL + "/reportDiseasesInRange", {
-      ...postMethod,
-      body: JSON.stringify(rangePayload),
-    })
+    await fetch(
+      process.env.NEXT_PUBLIC_API_URL +
+      `/reportIllnessesInRange?lang=${i18n.language}${getUrlParams(true)}`
+    )
       .then((res) => {
         if (res.status === 200) {
           return res.json();
         }
       })
       .then((response) => {
-        setStackedBarChartTitle("Reports for " + country.country_name);
+        if (
+          response !== null &&
+          typeof country === "object" &&
+          country !== null &&
+          Object.entries(country).length > 0
+        ) {
+          setStackedBarChartTitle(t("stats.reports_for_tag", { val: country.country_name }));
 
-        // Transformed data format
-        const transformedData = transformData(Object.values(response)) as any;
+          // Transformed data format
+          const transformedData = transformData(
+            Object.values(response),
+          ) as never;
 
-        // Keep consistent color for diseases / syndromes
-        const colorData = transferColorProperty(
-          transformedData,
-          appliedSelections,
-        );
+          // Keep consistent color for diseases / syndromes
+          const colorData = transferColorProperty(
+            transformedData,
+            appliedSelections,
+          );
 
-        setStackedBarChartLegend(colorData);
-        setStackedBarChartLabels(Object.keys(response));
-        setStackedBarChartData(colorData as any);
+          setStackedBarChartLegend(colorData);
+          setStackedBarChartLabels(Object.keys(response));
+          setStackedBarChartData(colorData as never);
+        }
       })
       .catch((error) => console.log(error));
   };
 
   const getRegionalPieChartData = async () => {
-    const regionPayload = {
-      filters: {
-        country_ids: [country.id],
-        end_date: dayjs(endDate).format(FetchDataDateFormat),
-        start_date: dayjs(startDate).format(FetchDataDateFormat),
-      },
-    };
-
-    await fetch(process.env.NEXT_PUBLIC_API_URL + `/reportIllnessesInRegion`, {
-      ...postMethod,
-      body: JSON.stringify(regionPayload),
-    })
+    fetch(process.env.NEXT_PUBLIC_API_URL +
+      `/reportIllnessesInRegion?lang=${i18n.language}${getUrlParams(true)}`)
       .then((res) => {
         if (res.status === 200) {
           return res.json();
@@ -220,7 +320,7 @@ export default function Home({
           return {
             label: item[0],
             count: item[1] as number,
-            backgroundColor: LegendColours[getRandomColorIndex(50)],
+            backgroundColor: "",
           };
         });
 
@@ -229,11 +329,13 @@ export default function Home({
           appliedSelections,
         );
 
-        setRegionPieChartLabels(formattedData.map((item: any) => item.label));
+        setRegionPieChartLabels(
+          formattedData.map((item: CheckArrayType) => item.label),
+        );
 
-        const data = formattedData.map((item: any) => item.count);
+        const data = formattedData.map((item: CheckArrayType) => item.count);
         const backgroundColor = colorData.map(
-          (item: any) => item.backgroundColor,
+          (item: CheckArrayType) => item.backgroundColor,
         );
         setRegionPieChartData([{ data, backgroundColor }]);
       })
@@ -241,46 +343,34 @@ export default function Home({
   };
 
   const getCountryPieChartData = async () => {
-    const countryPayload = {
-      filters: {
-        country_ids: [country.id],
-        end_date: dayjs(endDate).format(FetchDataDateFormat),
-        start_date: dayjs(startDate).format(FetchDataDateFormat),
-      },
-    };
-
-    await fetch(process.env.NEXT_PUBLIC_API_URL + "/reportDiseasesInLocation", {
-      ...postMethod,
-      body: JSON.stringify(countryPayload),
-    })
+    fetch(process.env.NEXT_PUBLIC_API_URL +
+      `/reportIllnessInCountry?lang=${i18n.language}${getUrlParams(true)}`)
       .then((res) => {
         if (res.status === 200) {
           return res.json();
         }
       })
       .then((response) => {
-        let currentCountryDiseases = response;
-        if (currentCountryDiseases["No results"] === 0) {
-          currentCountryDiseases = { covid19: 0 };
-        }
-
-        const color = checkTop10Diseases(currentCountryDiseases);
-
         const formattedData = Object.entries(response).map((item) => {
           return {
             label: item[0],
             count: item[1] as number,
-            backgroundColor: LegendColours[getRandomColorIndex(50)],
+            backgroundColor: "",
           };
         });
 
-        const colorData = transferColorProperty(formattedData, color);
+        const colorData = transferColorProperty(
+          formattedData,
+          appliedSelections,
+        );
 
-        setCountryPieChartLabels(formattedData.map((item: any) => item.label));
+        setCountryPieChartLabels(
+          formattedData.map((item: CheckArrayType) => item.label),
+        );
 
-        const data = formattedData.map((item: any) => item.count);
+        const data = formattedData.map((item: CheckArrayType) => item.count);
         const backgroundColor = colorData.map(
-          (item: any) => item.backgroundColor,
+          (item: CheckArrayType) => item.backgroundColor,
         );
 
         setCountryPieChartData([{ data, backgroundColor }]);
@@ -288,200 +378,194 @@ export default function Home({
       .catch((error) => console.log(error));
   };
 
-  const updateCharts = async () => {
+  const updateCharts = () => {
     // set subtitles on the two pie charts
-    setCountryTitleText("Distribution within " + country.country_name);
-
-    for (const [key, value] of Object.entries(subregions) as [
-      string,
-      string,
-    ][]) {
-      if (value.includes(country.iso3)) {
-        setRegionTitleText("Distribution within " + key);
-      }
+    if (
+      typeof country === "object" &&
+      country !== null &&
+      Object.entries(country).length > 0
+    ) {
+      setCountryTitleText(t("stats.distribution_within_tag", { val: country.country_name }));
+      setRegionTitleText(t("stats.distribution_within_tag", { val: country.subregion }));
     }
 
-    await getCountryPieChartData();
+    const appliedSelectionsWithColour: SelectionType[] = [];
+    selectedDiseases.forEach((item: Disease) => {
+      appliedSelectionsWithColour.push({
+        label: item.disease,
+        color: item.colour,
+      });
+    });
+    selectedSyndromes.forEach((item: Syndrome) => {
+      appliedSelectionsWithColour.push({
+        label: item.syndrome,
+        color: item.colour,
+      });
+    });
+
+    setAppliedSelections(appliedSelectionsWithColour);
   };
 
   const handleSwitchChange = () => {
     setAutoTop10(!autoTop10);
   };
 
-  return (
-    <Grid container spacing={2}>
-      <Grid xs={12}>
-        <Card>
-          <CardContent>
-            <Grid container spacing={2}>
-              <Grid xs={12} md={4}>
-                <Autocomplete
-                  id="countries"
-                  size="small"
-                  options={countries}
-                  getOptionLabel={(option: Country) =>
-                    `${option.country_name} (${option.iso3})`
-                  }
-                  includeInputInList
-                  autoComplete
-                  disableClearable
-                  value={country}
-                  onChange={(event: any, newValue: Country) => {
-                    setCountry(newValue);
-                  }}
-                  renderInput={(params) => (
-                    <TextField {...params} label="Country" />
-                  )}
-                />
-                {!countries && <LinearProgress />}
-              </Grid>
 
-              <Grid xs={12} md={4}>
-                <LocalizationProvider dateAdapter={AdapterDayjs}>
+  return (
+    <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale={i18n.language}>
+      <Grid container spacing={2}>
+        <Grid xs={12}>
+          <Card>
+            <CardContent>
+              <Grid container spacing={2}>
+                <Grid xs={12} md={4}>
+                  <Autocomplete
+                    id="countries"
+                    size="small"
+                    options={countries}
+                    getOptionLabel={(option: Country) =>
+                      `${option.country_name} (${option.iso3})`
+                    }
+                    includeInputInList
+                    autoComplete
+                    disableClearable
+                    value={country}
+                    isOptionEqualToValue={(option: Country, value: Country) =>
+                      option.iso3 === value.iso3
+                    }
+                    onChange={(event, newValue: Country) => {
+                      setCountry(newValue);
+                    }}
+                    renderInput={(params) => (
+                      <TextField {...params} label={t("stats.country_tag")} />
+                    )}
+                  />
+                  {!(countries.length > 0) && <LinearProgress />}
+                </Grid>
+
+                <Grid xs={12} md={4}>
                   <DatePicker
-                    minDate={earliestStartDate}
-                    maxDate={today}
                     format={DateFormat}
-                    label="Start Date"
+                    label={t("stats.start_date_tag")}
                     sx={{ width: 1 }}
                     slotProps={{ textField: { size: "small" } }}
                     value={startDate}
-                    onChange={(newValue) => setStartDate(newValue)}
+                    onChange={(newValue) => setStartDate(newValue as Dayjs)}
                   />
-                </LocalizationProvider>
-              </Grid>
+                </Grid>
 
-              <Grid xs={12} md={4}>
-                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <Grid xs={12} md={4}>
                   <DatePicker
-                    minDate={earliestStartDate}
-                    maxDate={today}
                     format={DateFormat}
-                    label="End Date"
+                    label={t("stats.end_date_tag")}
                     sx={{ width: 1 }}
                     slotProps={{ textField: { size: "small" } }}
                     value={endDate}
-                    onChange={(newValue) => setEndDate(newValue)}
+                    onChange={(newValue) => setEndDate(newValue as Dayjs)}
                   />
-                </LocalizationProvider>
-              </Grid>
+                </Grid>
 
-              <Grid xs={12} md={12}>
-                <Autocomplete
-                  multiple
-                  size="small"
-                  id="diseases"
-                  options={diseases}
-                  getOptionLabel={(option: Disease) => option.disease}
-                  includeInputInList
-                  autoComplete
-                  disableCloseOnSelect
-                  value={selectedDiseases}
-                  onChange={(event: any, newValue: Disease[]) => {
-                    setSelectedDiseases(newValue);
-                  }}
-                  renderInput={(params) => (
-                    <TextField {...params} label="Disease(s)" />
-                  )}
-                />
-                {!diseases && <LinearProgress />}
-              </Grid>
+                <Grid xs={12} md={12}>
+                  <Autocomplete
+                    multiple
+                    size="small"
+                    id="diseases"
+                    options={diseases}
+                    getOptionLabel={(option: Disease) => option.disease}
+                    includeInputInList
+                    autoComplete
+                    disableCloseOnSelect
+                    value={selectedDiseases}
+                    isOptionEqualToValue={(option: Disease, value: Disease) =>
+                      option.id === value.id
+                    }
+                    // onChange={(event, newValue: Disease[]) => {
+                    //   setSelectedDiseases(newValue);
+                    // }}
 
-              <Grid xs={12} md={12}>
-                <Autocomplete
-                  multiple
-                  size="small"
-                  id="syndromes"
-                  options={syndromes}
-                  getOptionLabel={(option: Syndrome) => option.syndrome}
-                  includeInputInList
-                  autoComplete
-                  disableCloseOnSelect
-                  value={selectedSyndromes}
-                  onChange={(event: any, newValue: Syndrome[]) => {
-                    setSelectedSyndromes(newValue);
-                  }}
-                  renderInput={(params) => (
-                    <TextField {...params} label="Syndrome(s)" />
-                  )}
-                />
-                {!syndromes && <LinearProgress />}
+                    onChange={(event, newValue: readonly Disease[]) => {
+                      const mutableDiseases = [...newValue];
+                      setSelectedDiseases(mutableDiseases);
+                    }}
+                    renderInput={(params) => (
+                      <TextField {...params} label={t("stats.diseases_tag")} />
+                    )}
+                  />
+                  {!(diseases.length > 0) && <LinearProgress />}
+                </Grid>
+
+                <Grid xs={12} md={12}>
+                  <Autocomplete
+                    multiple
+                    size="small"
+                    id="syndromes"
+                    options={syndromes}
+                    getOptionLabel={(option: Syndrome) => option.syndrome}
+                    includeInputInList
+                    autoComplete
+                    disableCloseOnSelect
+                    value={selectedSyndromes}
+                    isOptionEqualToValue={(option: Syndrome, value: Syndrome) =>
+                      option.id === value.id
+                    }
+                    onChange={(event, newValue: readonly Syndrome[]) => {
+                      const mutableSyndromes = [...newValue];
+                      setSelectedSyndromes(mutableSyndromes);
+                    }}
+                    renderInput={(params) => (
+                      <TextField {...params} label={t("stats.syndromes_tag")} />
+                    )}
+                  />
+                  {!(syndromes.length > 0) && <LinearProgress />}
+                </Grid>
+                <Grid xs={24} md={24}>
+                  <div className={styles.applyButton}>
+                    <FormGroup>
+                      <FormControlLabel
+                        control={
+                          <Switch
+                            checked={autoTop10}
+                            onChange={handleSwitchChange}
+                          />
+                        }
+                        label={t("stats.disease_top_10_tag")}
+                      />
+                    </FormGroup>
+                    <Button
+                      variant="contained"
+                      color="success"
+                      disabled={disableApply}
+                      onClick={updateCharts}
+                    >
+                      {t("stats.apply_tag")}
+                    </Button>
+                  </div>
+                </Grid>
               </Grid>
-              <Grid xs={24} md={24}>
-                <div className={styles.applyButton}>
-                  <FormGroup>
-                    <FormControlLabel
-                      control={
-                        <Switch
-                          checked={autoTop10}
-                          onChange={handleSwitchChange}
-                        />
-                      }
-                      label="Auto Disease Top 10"
-                    />
-                  </FormGroup>
-                  {/* TBD: add disable logic - only when filter values changes */}
-                  <Button
-                    variant="contained"
-                    color="success"
-                    onClick={updateCharts}
-                  >
-                    Apply
-                  </Button>
-                </div>
-              </Grid>
-            </Grid>
-          </CardContent>
-        </Card>
+            </CardContent>
+          </Card>
+        </Grid>
+
+        <BarChartLegend data={stackedBarChartLegend} />
+        <BarChart
+          labels={stackedBarChartLabels}
+          datasets={stackedBarChartData}
+          title={stackedBarChartTitle}
+        />
+
+        <PieChart
+          labels={countryPieChartLabels}
+          datasets={countryPieChartData}
+          title={t("stats.country_distribution_tag")}
+          subTitle={countryTitleText}
+        />
+        <PieChart
+          labels={countryRegionChartLabels}
+          datasets={countryRegionChartData}
+          title={t("stats.regional_distribution_tag")}
+          subTitle={regionTitleText}
+        />
       </Grid>
-
-      <BarChartLegend data={stackedBarChartLegend} />
-      <BarChart
-        labels={stackedBarChartLabels}
-        datasets={stackedBarChartData}
-        title={stackedBarChartTitle}
-      />
-
-      <PieChart
-        labels={countryPieChartLabels}
-        datasets={countryPieChartData}
-        title={"Country distribution"}
-        subTitle={countryTitleText}
-      />
-      <PieChart
-        labels={countryRegionChartLabels}
-        datasets={countryRegionChartData}
-        title={"Regional distribution"}
-        subTitle={regionTitleText}
-      />
-    </Grid>
+    </LocalizationProvider>
   );
-}
-
-const postMethod = {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-};
-
-export async function getServerSideProps(context: GetServerSidePropsContext) {
-  context.res.setHeader(
-    "Cache-Control",
-    "public, s-maxage=900, stale-while-revalidate=1000",
-  );
-  const countries = await (
-    await fetch(process.env.NEXT_PUBLIC_API_URL + "/countries")
-  ).json();
-  const diseases = await (
-    await fetch(process.env.NEXT_PUBLIC_API_URL + "/disease")
-  ).json();
-  const syndromes = await (
-    await fetch(process.env.NEXT_PUBLIC_API_URL + "/syndrome")
-  ).json();
-  const subregions = await (
-    await fetch(process.env.NEXT_PUBLIC_API_URL + "/subregions")
-  ).json();
-
-  return { props: { countries, diseases, syndromes, subregions } };
 }

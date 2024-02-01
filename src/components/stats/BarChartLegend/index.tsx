@@ -6,10 +6,12 @@ import Typography from "@mui/material/Typography";
 import LinearProgress from "@mui/material/LinearProgress";
 import styles from "@/styles/Stats.module.css";
 import { BarChartLegendProps } from "@/types";
+import { useTranslation } from "react-i18next";
 
 ChartJS.register(Legend);
 
 export default function BarChartLegend({ data }: BarChartLegendProps) {
+  const { t } = useTranslation();
   return (
     <Grid xs={12} md={2}>
       <Card className={styles.legendContainer}>
@@ -20,7 +22,7 @@ export default function BarChartLegend({ data }: BarChartLegendProps) {
             component="div"
             className={styles.legendTitle}
           >
-            Legend
+            {t("stats.legend_tag")}
           </Typography>
           {data.map((item, idx) => (
             <div className={styles.legendItemContainer} key={idx}>
