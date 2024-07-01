@@ -8,6 +8,8 @@ import { i18next_hi } from "../locales/hi/i18next.locale.hi";
 import "dayjs/locale/hi";
 import "dayjs/locale/en-gb";
 import "../styles/globals.css";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 
 const locales = {
   en: i18next_en,
@@ -30,9 +32,11 @@ i18n
 
 const EpiwatchApp = ({ Component, pageProps }: AppProps) => {
   return (
-    <PublicLayout>
-      <Component {...pageProps} />
-    </PublicLayout>
+    <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="en-gb">
+      <PublicLayout>
+        <Component {...pageProps} />
+      </PublicLayout>
+    </LocalizationProvider>
   );
 };
 

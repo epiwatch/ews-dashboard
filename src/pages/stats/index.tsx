@@ -38,8 +38,6 @@ import {
   CheckArrayType,
 } from "@/types";
 import { useTranslation } from "react-i18next";
-import { LocalizationProvider } from "@mui/x-date-pickers";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 
 ChartJS.register(ArcElement, Tooltip, CategoryScale, LinearScale);
 
@@ -412,160 +410,158 @@ export default function Home() {
 
 
   return (
-    <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale={i18n.language}>
-      <Grid container spacing={2}>
-        <Grid xs={12}>
-          <Card>
-            <CardContent>
-              <Grid container spacing={2}>
-                <Grid xs={12} md={4}>
-                  <Autocomplete
-                    id="countries"
-                    size="small"
-                    options={countries}
-                    getOptionLabel={(option: Country) =>
-                      `${option.country_name} (${option.iso3})`
-                    }
-                    includeInputInList
-                    autoComplete
-                    disableClearable
-                    value={country}
-                    isOptionEqualToValue={(option: Country, value: Country) =>
-                      option.iso3 === value.iso3
-                    }
-                    onChange={(event, newValue: Country) => {
-                      setCountry(newValue);
-                    }}
-                    renderInput={(params) => (
-                      <TextField {...params} label={t("stats.country_tag")} />
-                    )}
-                  />
-                  {!(countries.length > 0) && <LinearProgress />}
-                </Grid>
-
-                <Grid xs={12} md={4}>
-                  <DatePicker
-                    format={DateFormat}
-                    label={t("stats.start_date_tag")}
-                    sx={{ width: 1 }}
-                    slotProps={{ textField: { size: "small" } }}
-                    value={startDate}
-                    onChange={(newValue) => setStartDate(newValue as Dayjs)}
-                  />
-                </Grid>
-
-                <Grid xs={12} md={4}>
-                  <DatePicker
-                    format={DateFormat}
-                    label={t("stats.end_date_tag")}
-                    sx={{ width: 1 }}
-                    slotProps={{ textField: { size: "small" } }}
-                    value={endDate}
-                    onChange={(newValue) => setEndDate(newValue as Dayjs)}
-                  />
-                </Grid>
-
-                <Grid xs={12} md={12}>
-                  <Autocomplete
-                    multiple
-                    size="small"
-                    id="diseases"
-                    options={diseases}
-                    getOptionLabel={(option: Disease) => option.disease}
-                    includeInputInList
-                    autoComplete
-                    disableCloseOnSelect
-                    value={selectedDiseases}
-                    isOptionEqualToValue={(option: Disease, value: Disease) =>
-                      option.id === value.id
-                    }
-                    // onChange={(event, newValue: Disease[]) => {
-                    //   setSelectedDiseases(newValue);
-                    // }}
-
-                    onChange={(event, newValue: readonly Disease[]) => {
-                      const mutableDiseases = [...newValue];
-                      setSelectedDiseases(mutableDiseases);
-                    }}
-                    renderInput={(params) => (
-                      <TextField {...params} label={t("stats.diseases_tag")} />
-                    )}
-                  />
-                  {!(diseases.length > 0) && <LinearProgress />}
-                </Grid>
-
-                <Grid xs={12} md={12}>
-                  <Autocomplete
-                    multiple
-                    size="small"
-                    id="syndromes"
-                    options={syndromes}
-                    getOptionLabel={(option: Syndrome) => option.syndrome}
-                    includeInputInList
-                    autoComplete
-                    disableCloseOnSelect
-                    value={selectedSyndromes}
-                    isOptionEqualToValue={(option: Syndrome, value: Syndrome) =>
-                      option.id === value.id
-                    }
-                    onChange={(event, newValue: readonly Syndrome[]) => {
-                      const mutableSyndromes = [...newValue];
-                      setSelectedSyndromes(mutableSyndromes);
-                    }}
-                    renderInput={(params) => (
-                      <TextField {...params} label={t("stats.syndromes_tag")} />
-                    )}
-                  />
-                  {!(syndromes.length > 0) && <LinearProgress />}
-                </Grid>
-                <Grid xs={24} md={24}>
-                  <div className={styles.applyButton}>
-                    <FormGroup>
-                      <FormControlLabel
-                        control={
-                          <Switch
-                            checked={autoTop10}
-                            onChange={handleSwitchChange}
-                          />
-                        }
-                        label={t("stats.disease_top_10_tag")}
-                      />
-                    </FormGroup>
-                    <Button
-                      variant="contained"
-                      color="success"
-                      disabled={disableApply}
-                      onClick={updateCharts}
-                    >
-                      {t("stats.apply_tag")}
-                    </Button>
-                  </div>
-                </Grid>
+    <Grid container spacing={2}>
+      <Grid xs={12}>
+        <Card>
+          <CardContent>
+            <Grid container spacing={2}>
+              <Grid xs={12} md={4}>
+                <Autocomplete
+                  id="countries"
+                  size="small"
+                  options={countries}
+                  getOptionLabel={(option: Country) =>
+                    `${option.country_name} (${option.iso3})`
+                  }
+                  includeInputInList
+                  autoComplete
+                  disableClearable
+                  value={country}
+                  isOptionEqualToValue={(option: Country, value: Country) =>
+                    option.iso3 === value.iso3
+                  }
+                  onChange={(event, newValue: Country) => {
+                    setCountry(newValue);
+                  }}
+                  renderInput={(params) => (
+                    <TextField {...params} label={t("stats.country_tag")} />
+                  )}
+                />
+                {!(countries.length > 0) && <LinearProgress />}
               </Grid>
-            </CardContent>
-          </Card>
-        </Grid>
 
-        <BarChartLegend data={stackedBarChartLegend} />
-        <BarChart
-          labels={stackedBarChartLabels}
-          datasets={stackedBarChartData}
-          title={stackedBarChartTitle}
-        />
+              <Grid xs={12} md={4}>
+                <DatePicker
+                  format={DateFormat}
+                  label={t("stats.start_date_tag")}
+                  sx={{ width: 1 }}
+                  slotProps={{ textField: { size: "small" } }}
+                  value={startDate}
+                  onChange={(newValue) => setStartDate(newValue as Dayjs)}
+                />
+              </Grid>
 
-        <PieChart
-          labels={countryPieChartLabels}
-          datasets={countryPieChartData}
-          title={t("stats.country_distribution_tag")}
-          subTitle={countryTitleText}
-        />
-        <PieChart
-          labels={countryRegionChartLabels}
-          datasets={countryRegionChartData}
-          title={t("stats.regional_distribution_tag")}
-          subTitle={regionTitleText}
-        />
+              <Grid xs={12} md={4}>
+                <DatePicker
+                  format={DateFormat}
+                  label={t("stats.end_date_tag")}
+                  sx={{ width: 1 }}
+                  slotProps={{ textField: { size: "small" } }}
+                  value={endDate}
+                  onChange={(newValue) => setEndDate(newValue as Dayjs)}
+                />
+              </Grid>
+
+              <Grid xs={12} md={12}>
+                <Autocomplete
+                  multiple
+                  size="small"
+                  id="diseases"
+                  options={diseases}
+                  getOptionLabel={(option: Disease) => option.disease}
+                  includeInputInList
+                  autoComplete
+                  disableCloseOnSelect
+                  value={selectedDiseases}
+                  isOptionEqualToValue={(option: Disease, value: Disease) =>
+                    option.id === value.id
+                  }
+                  // onChange={(event, newValue: Disease[]) => {
+                  //   setSelectedDiseases(newValue);
+                  // }}
+
+                  onChange={(event, newValue: readonly Disease[]) => {
+                    const mutableDiseases = [...newValue];
+                    setSelectedDiseases(mutableDiseases);
+                  }}
+                  renderInput={(params) => (
+                    <TextField {...params} label={t("stats.diseases_tag")} />
+                  )}
+                />
+                {!(diseases.length > 0) && <LinearProgress />}
+              </Grid>
+
+              <Grid xs={12} md={12}>
+                <Autocomplete
+                  multiple
+                  size="small"
+                  id="syndromes"
+                  options={syndromes}
+                  getOptionLabel={(option: Syndrome) => option.syndrome}
+                  includeInputInList
+                  autoComplete
+                  disableCloseOnSelect
+                  value={selectedSyndromes}
+                  isOptionEqualToValue={(option: Syndrome, value: Syndrome) =>
+                    option.id === value.id
+                  }
+                  onChange={(event, newValue: readonly Syndrome[]) => {
+                    const mutableSyndromes = [...newValue];
+                    setSelectedSyndromes(mutableSyndromes);
+                  }}
+                  renderInput={(params) => (
+                    <TextField {...params} label={t("stats.syndromes_tag")} />
+                  )}
+                />
+                {!(syndromes.length > 0) && <LinearProgress />}
+              </Grid>
+              <Grid xs={24} md={24}>
+                <div className={styles.applyButton}>
+                  <FormGroup>
+                    <FormControlLabel
+                      control={
+                        <Switch
+                          checked={autoTop10}
+                          onChange={handleSwitchChange}
+                        />
+                      }
+                      label={t("stats.disease_top_10_tag")}
+                    />
+                  </FormGroup>
+                  <Button
+                    variant="contained"
+                    color="success"
+                    disabled={disableApply}
+                    onClick={updateCharts}
+                  >
+                    {t("stats.apply_tag")}
+                  </Button>
+                </div>
+              </Grid>
+            </Grid>
+          </CardContent>
+        </Card>
       </Grid>
-    </LocalizationProvider>
+
+      <BarChartLegend data={stackedBarChartLegend} />
+      <BarChart
+        labels={stackedBarChartLabels}
+        datasets={stackedBarChartData}
+        title={stackedBarChartTitle}
+      />
+
+      <PieChart
+        labels={countryPieChartLabels}
+        datasets={countryPieChartData}
+        title={t("stats.country_distribution_tag")}
+        subTitle={countryTitleText}
+      />
+      <PieChart
+        labels={countryRegionChartLabels}
+        datasets={countryRegionChartData}
+        title={t("stats.regional_distribution_tag")}
+        subTitle={regionTitleText}
+      />
+    </Grid>
   );
 }

@@ -7,6 +7,7 @@ export const i18next_en = {
     Home: "Home",
     Map: "Map",
     Stats: "Stats",
+    Articles: "Articles",
     Dataset: "Dataset"
   },
   home: {

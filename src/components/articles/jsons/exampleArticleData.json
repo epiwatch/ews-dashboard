@@ -1,0 +1,661 @@
+{
+    "getArticleUrlsStats": [
+        {
+            "id": 1530260,
+            "hashed_value": "https://flutrackers.com/forum/forum/internet-communication/avian-flu-diary/992935-cdc-issues-broader-influenza-a-guidance-for-agricultural-exhibits",
+            "reviewed": 1,
+            "flagged": 0,
+            "audited": 0,
+            "suggested_priority_score": null,
+            "priority_score": 1.0,
+            "execution_timestamp": "2024-06-29T20:05:16",
+            "name": "FluTrackers - New Forum Threads",
+            "no_reports": 4
+        },
+        {
+            "id": 1530235,
+            "hashed_value": "https://www.sfchronicle.com/news/article/un-muerto-varios-hospitalizados-por-brote-de-19538880.php",
+            "reviewed": 1,
+            "flagged": 0,
+            "audited": 0,
+            "suggested_priority_score": null,
+            "priority_score": 0.973844,
+            "execution_timestamp": "2024-06-29T16:44:19",
+            "name": "Google News Email",
+            "no_reports": 1
+        },
+        {
+            "id": 1530234,
+            "hashed_value": "https://dunya.com.pk/index.php/city/lahore/2024-06-26/2368965",
+            "reviewed": 1,
+            "flagged": 0,
+            "audited": 0,
+            "suggested_priority_score": null,
+            "priority_score": 0.914182,
+            "execution_timestamp": "2024-06-29T16:44:19",
+            "name": "Google News Email",
+            "no_reports": 1
+        },
+        {
+            "id": 1530223,
+            "hashed_value": "https://banglahunt.com/several-farms-affected-by-bird-flu-the-infection-is-spreading-spn/",
+            "reviewed": 1,
+            "flagged": 0,
+            "audited": 0,
+            "suggested_priority_score": null,
+            "priority_score": 0.92856,
+            "execution_timestamp": "2024-06-29T16:44:19",
+            "name": "Google News Email",
+            "no_reports": 1
+        },
+        {
+            "id": 1530204,
+            "hashed_value": "https://www.zonebourse.com/cours/indice/DOW-JONES-SOUTH-AFRICA-ZA-55518594/actualite/L-Afrique-du-Sud-signale-un-troisieme-deces-du-a-la-variole-le-nombre-de-cas-s-eleve-a-16-47103720/",
+            "reviewed": 1,
+            "flagged": 0,
+            "audited": 0,
+            "suggested_priority_score": null,
+            "priority_score": 0.933749,
+            "execution_timestamp": "2024-06-29T16:44:19",
+            "name": "Google News Email",
+            "no_reports": 1
+        },
+        {
+            "id": 1530198,
+            "hashed_value": "https://www.barrons.com/news/la-fiebre-del-oropouche-se-extiende-en-cuba-a-mas-de-la-mitad-del-territorio-a604b051",
+            "reviewed": 1,
+            "flagged": 0,
+            "audited": 0,
+            "suggested_priority_score": null,
+            "priority_score": 0.925259,
+            "execution_timestamp": "2024-06-29T16:44:19",
+            "name": "Google News Email",
+            "no_reports": 1
+        },
+        {
+            "id": 1530197,
+            "hashed_value": "https://www.ambito.com/mundo/fiebre-oropouche-aumentan-los-casos-cuba-y-se-extiende-mas-la-mitad-del-pais-n6020647",
+            "reviewed": 1,
+            "flagged": 0,
+            "audited": 0,
+            "suggested_priority_score": null,
+            "priority_score": 0.928245,
+            "execution_timestamp": "2024-06-29T16:44:19",
+            "name": "Google News Email",
+            "no_reports": 1
+        },
+        {
+            "id": 1530171,
+            "hashed_value": "https://www.anandabazar.com/lifestyle/cows-are-infected-in-h5n1-virus-in-us-bird-flu-outbreak-spreads-to-mammals-in-31-states-dgtl/cid/1526392",
+            "reviewed": 1,
+            "flagged": 0,
+            "audited": 0,
+            "suggested_priority_score": null,
+            "priority_score": 0.983083,
+            "execution_timestamp": "2024-06-29T16:44:19",
+            "name": "Google News Email",
+            "no_reports": 1
+        },
+        {
+            "id": 1530161,
+            "hashed_value": "https://aawsat.com/home/article/1282576/%D8%A7%D8%B1%D8%AA%D9%81%D8%A7%D8%B9-%D8%AD%D8%B5%D9%8A%D9%84%D8%A9-%D8%B6%D8%AD%D8%A7%D9%8A%D8%A7-%D9%86%D9%8A%D8%A8%D8%A7%D9%87-%D8%A8%D8%A7%D9%84%D9%87%D9%86%D8%AF?page=4",
+            "reviewed": 1,
+            "flagged": 0,
+            "audited": 0,
+            "suggested_priority_score": null,
+            "priority_score": 0.990739,
+            "execution_timestamp": "2024-06-29T16:44:19",
+            "name": "Google News Email",
+            "no_reports": 1
+        },
+        {
+            "id": 1530156,
+            "hashed_value": "https://www.cumhuriyet.com.tr/dunya/nijeryada-kolera-salgini-nedeniyle-ulusal-acil-durum-ilan-edildi-2220946?utm_campaign=Cumhuriyet&utm_medium=Surmanset&utm_source=Anasayfa",
+            "reviewed": 1,
+            "flagged": 0,
+            "audited": 0,
+            "suggested_priority_score": null,
+            "priority_score": 0.962442,
+            "execution_timestamp": "2024-06-29T16:44:19",
+            "name": "Google News Email",
+            "no_reports": 1
+        },
+        {
+            "id": 1530130,
+            "hashed_value": "https://bangla.bdnews24.com/health/310056cb8ed3",
+            "reviewed": 1,
+            "flagged": 0,
+            "audited": 0,
+            "suggested_priority_score": null,
+            "priority_score": 0.975621,
+            "execution_timestamp": "2024-06-29T16:44:19",
+            "name": "Google News Email",
+            "no_reports": 1
+        },
+        {
+            "id": 1530129,
+            "hashed_value": "https://bangla.dhakatribune.com/bangladesh/82254/%E0%A6%9A%E0%A7%8B%E0%A6%96-%E0%A6%B0%E0%A6%BE%E0%A6%99%E0%A6%BE%E0%A6%9A%E0%A7%8D%E0%A6%9B%E0%A7%87-%E0%A6%A1%E0%A7%87%E0%A6%99%E0%A7%8D%E0%A6%97%E0%A7%81-%E0%A7%A8%E0%A7%AA-%E0%A6%98%E0%A6%A3%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A7%9F-%E0%A7%A7-%E0%A6%9C%E0%A6%A8%E0%A7%87%E0%A6%B0-%E0%A6%AE%E0%A7%83%E0%A6%A4%E0%A7%8D%E0%A6%AF%E0%A7%81",
+            "reviewed": 1,
+            "flagged": 0,
+            "audited": 0,
+            "suggested_priority_score": null,
+            "priority_score": 0.995032,
+            "execution_timestamp": "2024-06-29T16:44:19",
+            "name": "Google News Email",
+            "no_reports": 1
+        },
+        {
+            "id": 1530099,
+            "hashed_value": "https://jang.com.pk/news/1363795",
+            "reviewed": 1,
+            "flagged": 0,
+            "audited": 0,
+            "suggested_priority_score": null,
+            "priority_score": 0.973689,
+            "execution_timestamp": "2024-06-29T16:44:19",
+            "name": "Google News Email",
+            "no_reports": 1
+        },
+        {
+            "id": 1530088,
+            "hashed_value": "https://www.prensa-latina.cu/2024/06/26/reportan-viruela-simica-en-provincia-de-kivu-norte-en-rdc/",
+            "reviewed": 1,
+            "flagged": 0,
+            "audited": 0,
+            "suggested_priority_score": null,
+            "priority_score": 0.950769,
+            "execution_timestamp": "2024-06-29T16:44:19",
+            "name": "Google News Email",
+            "no_reports": 1
+        }
+    ],
+    "getArticleReports": [
+        {
+            "id": 228176,
+            "disease": "Influenza A",
+            "syndrome": ""
+        },
+        {
+            "id": 228177,
+            "disease": "influenza a/h1n1",
+            "syndrome": ""
+        },
+        {
+            "id": 228178,
+            "disease": "influenza",
+            "syndrome": ""
+        },
+        {
+            "id": 228179,
+            "disease": "influenza a/h5n1",
+            "syndrome": ""
+        }
+    ],
+    "getArticleContent": [
+        {
+            "article_reviewdata_field_id": 1,
+            "value": "https://flutrackers.com/forum/forum/internet-communication/avian-flu-diary/992935-cdc-issues-broader-influenza-a-guidance-for-agricultural-exhibits",
+            "value_original_language": null,
+            "value_with_nlp": null,
+            "nlp_list": []
+        },
+        {
+            "article_reviewdata_field_id": 2,
+            "value": "CDC Issues Broader Influenza A Guidance For Agricultural Exhibits",
+            "value_original_language": null,
+            "value_with_nlp": "CDC Issues Broader (#[#[x:1]#]#) Guidance For Agricultural Exhibits",
+            "nlp_list": [
+                {
+                    "nlp_index": 1,
+                    "display_text": "Influenza A",
+                    "category": "disease"
+                }
+            ]
+        },
+        {
+            "article_reviewdata_field_id": 3,
+            "value": "<div><div>\n<span/>\n<div>\n<div>\n#1\n\t\t\t\t\t\t\t\t\n</div>\n<div>\n<h2>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\tCDC Issues Broader Influenza A Guidance For Agricultural Exhibits\n\t\t\t\t\t\t\t\t</h2>\n<div><span>Today, 08:22 AM</span></div>\n</div>\n</div>\n<div>\n\n\n<div>\n<div>\n\n</div>\n<div>\n<b>CDC Issues Broader Influenza A Guidance For Agricultural Exhibits</b><br/>\n<br/>\n<br/>\nCredit CDC<br/>\n<br/>\n#18,157<br/>\n<br/>\nYesterday, in <b>CDC FluView Wk #25: 2 New Novel Swine Flu Cases (H1N2v) In Pennsylvania</b>, we looked at the latest among the more than 500 swine-variant influenza (<b>H1N1v, H1N2v, or H3N2v</b>) human infections reported in the United States since 2010.<div><br/>\nMany of these cases have been linked to participation in or attendance of agricultural exhibits at county and state fairs.</div> <br/>\nSince swine-variant infections are usually mild - and testing is limited - these known cases probably represent only a fraction of the actual number of spillovers that have occurred (see <b>CID Journal: Estimates Of Human Infection From H3N2v (Jul 2011-Apr 2012)).</b><br/>\n<br/>\nFortunately, these swine-variant viruses don't transmit efficiently in humans, and outbreaks have been limited. But, as we saw with the H1N1 2009 pandemic, occasionally these types of viruses are able to evolve sufficiently to overcome these constraints.<br/>\n<br/>\nThe <b>CDC's Assessment on Swine Variant Viruses</b> reads:<div><br/>\nSporadic infections and even localized outbreaks among people with variant influenza viruses may occur. All influenza viruses have the capacity to change, and it’s possible that variant viruses may change such that they gain the ability to infect people easily and spread easily from person-to-person. The Centers for Disease Control and Prevention (CDC) continues to monitor closely for variant influenza virus infections and will report cases weekly in <b>FluView</b> and in the <b>Novel Influenza A Virus Infections (cdc.gov)</b> section of <b>FluView Interactive.</b></div> <br/>\nAlthough the public health risks are considered low, the <b>CDC advises</b> those who are at higher risk of <b>serious flu complications</b> (<i>including</i><i> <b>children under 5, adults over 65, pregnant women</b>, and those with certain <b>chronic medical conditions</b></i><i>)</i>, to <b>avoid pigs and the swine barn altogether.</b><div><br/>\nWhile we've seen some restrictions (<i>and a few outright bans)</i> of poultry exhibits due to H5N1 in the past, since March of 2024 <b>HPAI H5</b> has unexpectedly turned up in American livestock, including <i><b>cattle, goats, </b>and<b> alpacas.</b></i></div> <br/>\n<br/>\n<b>At least 3 mild human infections</b> have been linked to cattle exposure, and we've seen <b>reports of hundreds of peridomestic mammals</b> (<i>including cats, mice, raccoons, skunks, and foxes</i>) infected, often fatally.<div><br/>\nAgain, both are likely under-counts.</div> <br/>\nWe've already seen growing concerns over the risks of H5N1 transmission (<i>animal-to-animal and animal-to-human)</i> from livestock at agricultural exhibits, including:<div><br/>\n<b>County Fairs Debating Dairy/Poultry Exhibits Over H5N1 Concerns<br/>\n<br/>\nMinnesota BOAH Announces Testing Requirements for Lactating Cattle Before Exhibition</b></div> <br/>\nThis week the CDC released updated guidance for agricultural exhibits which now covers more than just swine-variant influenza, and pigs.<div><br/>\n<b>Considerations and Information for Fair Organizers to Help Prevent Influenza</b></div><div><b>Considerations and Information for Fair Exhibitors to Help Prevent Influenza</b></div> <br/>\nThe CDC and USDA continue to churn out advice and recommendations regarding <b>HPAI H5</b> (see <b>here, here, here</b>, and <b>here</b>), but it is up to local jurisdictions to decide which to implement.<div><br/>\nSome, like the <b>recommended PPE for farm workers</b> have been a tough sell.</div> <br/>\nDue to their lengths (<i>and overlaps</i>) I've only included some excerpts from these new guidance documents. Follow the links to read them in their entirety.<div><br/>\n<b>Considerations and Information for Fair Organizers to Help Prevent Influenza</b><br/>\n<br/>\nCDC keeps track of how many people get influenza (flu) caused by animal influenza A viruses throughout the year, including during exhibition season. As you organize your local or state agricultural fair or any other livestock exhibitions, be aware of important information to help protect visitors and livestock (e.g. pigs, poultry, cattle). This information can help prevent illnesses in public settings, like agricultural fairs, where people and animals from many places are in close contact.<br/>\n<br/>\n<b>Background</b><br/>\n<br/>\nLivestock fairs and shows are an important learning opportunity for people of all ages interested in agriculture. Animals commonly exhibited at agricultural fairs and shows, including<b> pigs, poultry</b> (e.g., chickens, turkeys, ducks, geese), and<b> cattle, </b>can carry and spread influenza A viruses that are different from human seasonal influenza A viruses. <b>Pigs</b> can be infected with swine influenza A viruses, and <b>poultry</b> can be infected with avian influenza A viruses. In March 2024, avian influenza A(H5N1) virus <b>in dairy cattle</b>was first reported.<br/>\n<br/>\n<b>Influenza viruses are more likely to spread when people and animals from many places are in close contact, such as at fairs and shows</b>. While rare, <b>influenza A viruses can spread from people to animals (including pigs, poultry, and cattle) and from animals to people. </b>The main way people get infected with animal influenza A viruses is by being around infected animals, especially if they have close contact with them. It is not very common for people to get sick from these viruses, but when they do, <b>the sickness can vary from mild to severe. In some cases, it can even lead to hospitalization or death</b>. CDC recommends fair organizers take actions to help prevent the spread of influenza A viruses between animals at fairs and animals and people.</div><div><b>Take action to prevent the spread of influenza viruses between animals and people at fairs</b><br/>\n<br/>\nThe risk of infection and spread of animal influenza A viruses to people <span><b>can be reduced</b> </span>by taking simple actions. CDC recommends fair organizers consider the following actions:</div><div>Actions to consider when planning for fairs:</div><div><ul><li>Have available appropriate personal protective equipment (PPE) for staff and exhibitors to follow the <b>CDC Updated Interim PPE Recommendations to Reduce Exposure to Novel Influenza A Viruses Associated with Disease in Human</b>s in the event sick animals are identified during the fair</li>\n</ul></div><div><ul><li><ul><li>This includes protective clothing, gloves, goggles, and a <b>respirator or well-fitting mask</b> that covers the mouth and nose.</li>\n</ul></li>\n</ul></div><div><ul><li><b>Control visitor traffic to prevent overcrowding</b>. Create opportunities for one-directional traffic flow and limit public access to animals and animal bedding outside of designated areas when possible.</li>\n<li>Locate food service, concession stands, and dining/picnic tables away from animal areas.</li>\n<li><b>Place physical barriers between the public and animal displays to limit close contact with poultry, pigs, cattle, and other animals.</b> Use alternatives to live-animal, hands-on exhibits that do not involve close contact with poultry, pigs, and cattle (i.e., milk a pretend cow exhibit).</li>\n<li>Provide <b>adequate ventilation for both animals and human</b>s. For enclosed or partially enclosed barns, increase the amount of clean outdoor air and direct clean air so that it flows over visitors and workers before animals and minimizes disturbing dust.</li>\n<li>Store animal feeding, watering, and cleaning equipment (e.g., buckets, shovels, wheelbarrows, and pitchforks) in designated areas that restrict public access. Avoid transporting soiled bedding through non-animal areas or transition areas. If this is unavoidable, take precautions to prevent spillage and clean up spillage right after it occurs.</li>\n<li>Locate longer-term exhibits (i.e., big bulls/boars, birthing center animals, breed exhibits) away from areas where competition livestock are housed.</li>\n<li><b>Limit the time animals are kept on the exhibition grounds</b>(72 hours or less is ideal) to help prevent or interrupt the spread of flu between animals.</li>\n<li>Where feasible, clean and disinfect animal areas (e.g., flooring and railings) and equipment (e.g., gates, chutes, sort panels) at least once daily. Additionally, animal areas should be cleaned and disinfected between groups of animals. Use <b>disinfectants effective against influenza A viruses t</b>hat are safe for human and animal contact.</li>\n<li>Inform and educate exhibitors and visitors on the risks of infection and spread of animal influenza A viruses and how to prevent the spread between people and animals (including pigs, poultry, and cattle).</li>\n</ul></div><div><ul><li><ul><li>Display or hand out <b>educational materials </b>to exhibitors at registration and to visitors when entering fairgrounds on how to prevent the spread of influenza viruses between people and animals (including pigs, poultry, and cattle).</li>\n<li>Post materials that show who may be at <b>higher risk of serious flu complications</b> and instruct them <b>not to have close contact with animals that could carry influenza viruses (pigs, poultry, and cattle) and should not enter enclosures.</b></li>\n<li>Post signs or otherwise <b>instruct visitors not to eat, drink, smoke/vape, touch or place their hands in their mouth, touch their eyes, or use bottles or pacifiers while in animal areas.</b></li>\n<li>Educate staff and exhibitors to instruct visitors not to carry toys, pacifiers, spill-proof cups, baby bottles, strollers, or similar items into animal areas. If possible, establish storage or holding areas for strollers and related items.</li>\n<li>Instruct visitors to <b>supervise children closely to discourage touching of eyes, hand-to-mouth activities</b> (e.g., nail-biting and thumb-sucking), and prevent contact with soiled animal bedding. Parents should also be instructed to prevent their children from sitting or playing on the ground in animal areas.</li>\n<li>Instruct visitors to<b> limit contact with animals that can be infected with influenza viruses (including pigs, poultry, and cattle).</b> Direct physical contact with the animal includes touching, holding, kissing, being bitten, licked, and scratched.</li>\n<li>Instruct parents and children to wash their hands with soap and water right after leaving animal areas, even if they did not touch an animal, and after coming in contact with contaminated environments or materials. If children’s hands become soiled, supervised hand washing should occur immediately.</li>\n<li>Post signs on hand hygiene and provide multiple hand-washing stations with running water, soap, and paper towels in transition areas between animal and non-animal areas and in food concession areas. Ensure hand-washing stations are accessible for all visitors, including children and persons with disabilities.</li>\n<li>Post all signs and other instructions in English, Spanish, and other appropriate languages, as well as in age-appropriate formats.</li>\n</ul></li>\n</ul></div> <br/>\n<b>(Continue . . . )</b><br/>\n<br/>\nThe second document includes:<div><br/>\n<b>Considerations and Information for Fair Exhibitors to Help Prevent Influenza</b></div> <br/>\n(Excerpt)<div><b>People at higher risk of serious flu complications</b><ul><li>Some people (e.g. children younger than 5 years, people 65 years and older, pregnant people, and people with certain chronic medical conditions, and others) are at higher risk of developing serious flu complications and should limit contact with animals (pigs, poultry, cattle) that could carry influenza viruses, if possible.</li>\n<li>If fair exhibitors at higher risk of developing serious flu complications cannot avoid exposure to, or direct contact with, pigs, poultry, cattle, or other animals, they should follow the <b>CDC Updated Interim PPE Recommendations to Reduce Exposure to Novel Influenza A Viruses Associated with Disease in Humans</b>. This includes wearing protective clothing, gloves, goggles, and a <b>respirator or well-fitting mask</b>that covers the nose and mouth. Parents and caregivers should review <b>considerations for specific groups of people</b> when selecting a respirator or mask for children.</li>\n</ul><br/>\n<b>What to do if you get sick</b><ul><li>Flu symptoms usually include fever, cough, sore throat, runny or stuffy nose, muscle or body aches, headaches, fatigue, and sometimes vomiting or diarrhea. Eye redness/irritation or eye discharge can also occur.</li>\n<li>If you get any of these symptoms, seek medical care and tell your provider about your contact with animals.</li>\n<li>A health care provider can decide whether influenza testing or antiviral treatment is needed.</li>\n<li>Influenza antiviral drugs can treat people with animal influenza virus infections as well as seasonal flu illness. These medications are recommended for treatment of people with swine or avian influenza symptoms.</li>\n<li>Antiviral drugs work better the sooner you start them after your symptoms begin, so seek medical care promptly if you get symptoms, especially if you are at higher risk of serious flu complications.</li>\n</ul>When people get infected with animal influenza A viruses, they may experience signs and symptoms that are similar to those caused by seasonal influenza A viruses, including:<ul><li>fever or feeling feverish</li>\n<li>cough</li>\n<li>sore throat</li>\n<li>runny or stuffy nose</li>\n<li>muscle or body aches</li>\n<li>headaches</li>\n<li>fatigue</li>\n<li>sometimes vomiting or diarrhea</li>\n<li>eye redness/irritation or eye discharge (This is more commonly reported with human infections with animal influenza viruses than seasonal influenza viruses.)</li>\n</ul></div> <br/>\n<b>(Continue . . . )</b><br/>\n<br/>\nThere are more than <b>3000</b> county and state fairs in the United States, where every year tens of thousands of exhibitors draw tens of millions of visitors. Each operates under local or state rules, which can vary greatly between jurisdictions.<div><br/>\nGiven the costs, inconvenience, and in some cases - <i>impracticality</i> - of some of these recommendations, I expect compliance will be limited. I'm sure the CDC knows that.</div> <br/>\nSo far H5N1, and the current crop of swine-variant influenza viruses, haven't acquired the ability to spread efficiently in humans. Hopefully, they never will.<div><br/>\nBut venues like <b>state and county fairs</b>, and <b>multi-species farms</b>, can provide viruses with evolutionary opportunities they might otherwise not encounter.</div> <br/>\nSince hope is not a plan, next month (July 16th) the CDC will hold a COCA call for clinicians and healthcare facilities on recognizing, treating, and reporting H5N1 in humans.<div><br/>\n<b>Update on Highly Pathogenic Avian Influenza A(H5N1) Virus for Clinicians and Healthcare Centers</b><br/>\n<br/>\n = Free Continuing Education</div><div><b>Overview</b></div><div>Highly Pathogenic Avian Influenza (HPAI) (H5N1) virus is widespread among wild birds and continues to cause outbreaks in poultry and spillover to mammals. In March 2024, HPAI A(H5N1) virus was detected in dairy cattle. To date, there have been three human cases of HPAI A(H5N1) virus infection identified in dairy farm workers in the United States.</div><div><b>The risk to the public from HPAI A(H5N1) viruses is low;</b> however, <b>people who have job-related or recreational exposure to infected birds or animals, including dairy cattle, are at greater risk </b>of HPAI A(H5N1) virus infection. During this COCA Call, presenters will give an update on the current outbreak in the United States and current CDC surveillance and monitoring efforts. They will also provide<b> information for clinicians on testing, using antivirals, and infection prevention and control recommendations.</b></div> <br/>\n<i>Stay tuned.<br/>\n<br/>\n<br/>\nhttps://afludiary.blogspot.com/2024/...-guidance.html </i><br/>\n​\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</div>\n</div>\n\n\n<div>All medical discussions are for educational purposes. I am not a doctor, just a retired paramedic. Nothing I post should be construed as specific medical advice. If you have a medical problem, see your physician.</div>\n\n</div>\n</div></div>",
+            "value_original_language": null,
+            "value_with_nlp": "<div><div>\n<span/>\n<div>\n<div> #1 </div>\n<div>\n<h2> CDC Issues Broader (#[#[x:1]#]#) Guidance For Agricultural Exhibits </h2>\n<div><span> Today, 08:22 AM </span></div>\n</div>\n</div>\n<div>\n\n\n<div>\n<div>\n\n</div>\n<div>\n<b> CDC Issues Broader (#[#[x:2]#]#) Guidance For Agricultural Exhibits </b><br/>\n<br/>\n<br/> Credit CDC <br/>\n<br/> #18,157 <br/>\n<br/> Yesterday, in <b> CDC FluView Wk #25: 2 New Novel (#[#[x:3]#]#) Cases (H1N2v) In Pennsylvania </b> , we looked at the latest among the more than 500 swine-variant (#[#[x:4]#]#) ( <b> H1N1v, H1N2v, or H3N2v </b> ) human infections reported in the (#[#[x:5]#]#) since 2010. <div><br/> Many of these cases have been linked to participation in or attendance of agricultural exhibits at county and state fairs. </div> <br/> Since swine-variant infections are usually mild - and testing is limited - these known cases probably represent only a fraction of the actual number of spillovers that have occurred (see <b> CID Journal: Estimates Of Human Infection From H3N2v (Jul 2011-Apr 2012)). </b><br/>\n<br/> Fortunately, these swine-variant viruses don't transmit efficiently in humans, and outbreaks have been limited. But, as we saw with the (#[#[x:6]#]#) 2009 pandemic, occasionally these types of viruses are able to evolve sufficiently to overcome these constraints. <br/>\n<br/> The <b> CDC's Assessment on Swine Variant Viruses </b> reads: <div><br/> Sporadic infections and even localized outbreaks among people with variant (#[#[x:7]#]#) viruses may occur. All (#[#[x:8]#]#) viruses have the capacity to change, and it’s possible that variant viruses may change such that they gain the ability to infect people easily and spread easily from person-to-person. The Centers for Disease Control and Prevention (CDC) continues to monitor closely for variant (#[#[x:9]#]#) virus infections and will report cases weekly in <b> FluView </b> and in the <b> Novel (#[#[x:10]#]#) Virus Infections (cdc.gov) </b> section of <b> FluView Interactive. </b></div> <br/> Although the public health risks are considered low, the <b> CDC advises </b> those who are at higher risk of <b> serious (#[#[x:11]#]#) complications </b> ( <i> including </i><i> <b> children under 5, adults over 65, pregnant women </b> , and those with certain <b> chronic medical conditions </b></i><i> ) </i> , to <b> avoid pigs and the swine barn altogether. </b><div><br/> While we've seen some restrictions ( <i> and a few outright bans) </i> of poultry exhibits due to (#[#[x:12]#]#) in the past, since (#[#[x:13]#]#) <b> HPAI H5 </b> has unexpectedly turned up in American livestock, including <i><b> cattle, goats, </b> and <b> alpacas. </b></i></div> <br/>\n<br/>\n<b> At least 3 mild human infections </b> have been linked to cattle exposure, and we've seen <b> reports of hundreds of peridomestic mammals </b> ( <i> including cats, mice, raccoons, skunks, and foxes </i> ) infected, often fatally. <div><br/> Again, both are likely under-counts. </div> <br/> We've already seen growing concerns over the risks of (#[#[x:14]#]#) transmission ( <i> animal-to-animal and animal-to-human) </i> from livestock at agricultural exhibits, including: <div><br/>\n<b> County Fairs Debating Dairy/Poultry Exhibits Over (#[#[x:15]#]#) Concerns <br/>\n<br/> (#[#[x:16]#]#) BOAH Announces Testing Requirements for Lactating Cattle Before Exhibition </b></div> <br/> This week the CDC released updated guidance for agricultural exhibits which now covers more than just swine-variant (#[#[x:17]#]#), and pigs. <div><br/>\n<b> Considerations and Information for Fair Organizers to Help Prevent (#[#[x:18]#]#) </b></div><div><b> Considerations and Information for Fair Exhibitors to Help Prevent (#[#[x:19]#]#) </b></div> <br/> The CDC and USDA continue to churn out advice and recommendations regarding <b> HPAI H5 </b> (see <b> here, here, here </b> , and <b> here </b> ), but it is up to local jurisdictions to decide which to implement. <div><br/> Some, like the <b> recommended PPE for farm workers </b> have been a tough sell. </div> <br/> Due to their lengths ( <i> and overlaps </i> ) I've only included some excerpts from these new guidance documents. Follow the links to read them in their entirety. <div><br/>\n<b> Considerations and Information for Fair Organizers to Help Prevent (#[#[x:20]#]#) </b><br/>\n<br/> CDC keeps track of how many people get (#[#[x:22]#]#) ((#[#[x:23]#]#)) caused by animal (#[#[x:21]#]#) viruses throughout (#[#[x:24]#]#), including during exhibition season. As you organize your local or state agricultural fair or any other livestock exhibitions, be aware of important information to help protect visitors and livestock (e.g. pigs, poultry, cattle). This information can help prevent illnesses in public settings, like agricultural fairs, where people and animals from many places are in close contact. <br/>\n<br/>\n<b> Background </b><br/>\n<br/> Livestock fairs and shows are an important learning opportunity for people of all ages interested in agriculture. Animals commonly exhibited at agricultural fairs and shows, including <b> pigs, poultry </b> (e.g., chickens, turkeys, ducks, geese), and <b> cattle, </b> can carry and spread (#[#[x:25]#]#) viruses that are different from human seasonal (#[#[x:26]#]#) viruses. <b> Pigs </b> can be infected with swine (#[#[x:27]#]#) viruses, and <b> poultry </b> can be infected with (#[#[x:28]#]#) A viruses. In (#[#[x:31]#]#), (#[#[x:29]#]#) A((#[#[x:30]#]#)) virus <b> in dairy cattle </b> was first reported. <br/>\n<br/>\n<b> (#[#[x:32]#]#) viruses are more likely to spread when people and animals from many places are in close contact, such as at fairs and shows </b> . While rare, <b> (#[#[x:33]#]#) viruses can spread from people to animals (including pigs, poultry, and cattle) and from animals to people. </b> The main way people get infected with animal (#[#[x:34]#]#) viruses is by being around infected animals, especially if they have close contact with them. It is not very common for people to get sick from these viruses, but when they do, <b> the sickness can vary from mild to severe. In some cases, it can even lead to hospitalization or death </b> . CDC recommends fair organizers take actions to help prevent the spread of (#[#[x:35]#]#) viruses between animals at fairs and animals and people. </div><div><b> Take action to prevent the spread of (#[#[x:36]#]#) viruses between animals and people at fairs </b><br/>\n<br/> The risk of infection and spread of animal (#[#[x:37]#]#) viruses to people <span><b> can be reduced </b> </span> by taking simple actions. CDC recommends fair organizers consider the following actions: </div><div> Actions to consider when planning for fairs: </div><div><ul><li> Have available appropriate personal protective equipment (PPE) for staff and exhibitors to follow the <b> CDC Updated Interim PPE Recommendations to Reduce Exposure to Novel (#[#[x:38]#]#) Viruses Associated with Disease in Human </b> s in the event sick animals are identified during the fair </li>\n</ul></div><div><ul><li><ul><li> This includes protective clothing, gloves, goggles, and a <b> respirator or well-fitting mask </b> that covers the mouth and nose. </li>\n</ul></li>\n</ul></div><div><ul><li><b> Control visitor traffic to prevent overcrowding </b> . Create opportunities for one-directional traffic flow and limit public access to animals and animal bedding outside of designated areas when possible. </li>\n<li> Locate food service, concession stands, and dining/picnic tables away from animal areas. </li>\n<li><b> Place physical barriers between the public and animal displays to limit close contact with poultry, pigs, cattle, and other animals. </b> Use alternatives to live-animal, hands-on exhibits that do not involve close contact with poultry, pigs, and cattle (i.e., milk a pretend cow exhibit). </li>\n<li> Provide <b> adequate ventilation for both animals and human </b> s. For enclosed or partially enclosed barns, increase the amount of clean outdoor air and direct clean air so that it flows over visitors and workers before animals and minimizes disturbing dust. </li>\n<li> Store animal feeding, watering, and cleaning equipment (e.g., buckets, shovels, wheelbarrows, and pitchforks) in designated areas that restrict public access. Avoid transporting soiled bedding through non-animal areas or transition areas. If this is unavoidable, take precautions to prevent spillage and clean up spillage right after it occurs. </li>\n<li> Locate longer-term exhibits (i.e., big bulls/boars, birthing center animals, breed exhibits) away from areas where competition livestock are housed. </li>\n<li><b> Limit the time animals are kept on the exhibition grounds </b> (72 hours or less is ideal) to help prevent or interrupt the spread of (#[#[x:39]#]#) between animals. </li>\n<li> Where feasible, clean and disinfect animal areas (e.g., flooring and railings) and equipment (e.g., gates, chutes, sort panels) at least once daily. Additionally, animal areas should be cleaned and disinfected between groups of animals. Use <b> disinfectants effective against (#[#[x:40]#]#) viruses t </b> hat are safe for human and animal contact. </li>\n<li> Inform and educate exhibitors and visitors on the risks of infection and spread of animal (#[#[x:41]#]#) viruses and how to prevent the spread between people and animals (including pigs, poultry, and cattle). </li>\n</ul></div><div><ul><li><ul><li> Display or hand out <b> educational materials </b> to exhibitors at registration and to visitors when entering fairgrounds on how to prevent the spread of (#[#[x:42]#]#) viruses between people and animals (including pigs, poultry, and cattle). </li>\n<li> Post materials that show who may be at <b> higher risk of serious (#[#[x:43]#]#) complications </b> and instruct them <b> not to have close contact with animals that could carry (#[#[x:44]#]#) viruses (pigs, poultry, and cattle) and should not enter enclosures. </b></li>\n<li> Post signs or otherwise <b> instruct visitors not to eat, drink, smoke/vape, touch or place their hands in their mouth, touch their eyes, or use bottles or pacifiers while in animal areas. </b></li>\n<li> Educate staff and exhibitors to instruct visitors not to carry toys, pacifiers, spill-proof cups, baby bottles, strollers, or similar items into animal areas. If possible, establish storage or holding areas for strollers and related items. </li>\n<li> Instruct visitors to <b> supervise children closely to discourage touching of eyes, hand-to-mouth activities </b> (e.g., nail-biting and thumb-sucking), and prevent contact with soiled animal bedding. Parents should also be instructed to prevent their children from sitting or playing on the ground in animal areas. </li>\n<li> Instruct visitors to <b> limit contact with animals that can be infected with (#[#[x:45]#]#) viruses (including pigs, poultry, and cattle). </b> Direct physical contact with the animal includes touching, holding, kissing, being bitten, licked, and scratched. </li>\n<li> Instruct parents and children to wash their hands with soap and water right after leaving animal areas, even if they did not touch an animal, and after coming in contact with contaminated environments or materials. If children’s hands become soiled, supervised hand washing should occur immediately. </li>\n<li> Post signs on hand hygiene and provide multiple hand-washing stations with running water, soap, and paper towels in transition areas between animal and non-animal areas and in food concession areas. Ensure hand-washing stations are accessible for all visitors, including children and persons with disabilities. </li>\n<li> Post all signs and other instructions in English, Spanish, and other appropriate languages, as well as in age-appropriate formats. </li>\n</ul></li>\n</ul></div> <br/>\n<b> (Continue . . . ) </b><br/>\n<br/> The second document includes: <div><br/>\n<b> Considerations and Information for Fair Exhibitors to Help Prevent (#[#[x:46]#]#) </b></div> <br/> (Excerpt) <div><b> People at higher risk of serious (#[#[x:47]#]#) complications </b><ul><li> Some people (e.g. children younger than 5 years, people 65 years and older, pregnant people, and people with certain chronic medical conditions, and others) are at higher risk of developing serious (#[#[x:49]#]#) complications and should limit contact with animals (pigs, poultry, cattle) that could carry (#[#[x:48]#]#) viruses, if possible. </li>\n<li> If fair exhibitors at higher risk of developing serious (#[#[x:50]#]#) complications cannot avoid exposure to, or direct contact with, pigs, poultry, cattle, or other animals, they should follow the <b> CDC Updated Interim PPE Recommendations to Reduce Exposure to Novel (#[#[x:51]#]#) Viruses Associated with Disease in Humans </b> . This includes wearing protective clothing, gloves, goggles, and a <b> respirator or well-fitting mask </b> that covers the nose and mouth. Parents and caregivers should review <b> considerations for specific groups of people </b> when selecting a respirator or mask for children. </li>\n</ul><br/>\n<b> What to do if you get sick </b><ul><li> (#[#[x:56]#]#) symptoms usually include (#[#[x:55]#]#), (#[#[x:54]#]#), sore throat, runny or stuffy nose, muscle or body aches, headaches, fatigue, and sometimes (#[#[x:53]#]#) or (#[#[x:52]#]#). Eye redness/irritation or eye discharge can also occur. </li>\n<li> If you get any of these symptoms, seek medical care and tell your provider about your contact with animals. </li>\n<li> A health care provider can decide whether (#[#[x:57]#]#) testing or antiviral treatment is needed. </li>\n<li> (#[#[x:59]#]#) antiviral drugs can treat people with animal (#[#[x:60]#]#) virus infections as well as seasonal (#[#[x:61]#]#) illness. These medications are recommended for treatment of people with swine or (#[#[x:58]#]#) symptoms. </li>\n<li> Antiviral drugs work better the sooner you start them after your symptoms begin, so seek medical care promptly if you get symptoms, especially if you are at higher risk of serious (#[#[x:62]#]#) complications. </li>\n</ul> When people get infected with animal (#[#[x:63]#]#) viruses, they may experience signs and symptoms that are similar to those caused by seasonal (#[#[x:64]#]#) viruses, including: <ul><li> (#[#[x:65]#]#) or feeling feverish </li>\n<li> (#[#[x:66]#]#) </li>\n<li> sore throat </li>\n<li> runny or stuffy nose </li>\n<li> muscle or body aches </li>\n<li> headaches </li>\n<li> fatigue </li>\n<li> sometimes (#[#[x:68]#]#) or (#[#[x:67]#]#) </li>\n<li> eye redness/irritation or eye discharge (This is more commonly reported with human infections with animal (#[#[x:69]#]#) viruses than seasonal (#[#[x:70]#]#) viruses.) </li>\n</ul></div> <br/>\n<b> (Continue . . . ) </b><br/>\n<br/> There are more than <b> 3000 </b> county and state fairs in the (#[#[x:71]#]#), where every year tens of thousands of exhibitors draw tens of millions of visitors. Each operates under local or state rules, which can vary greatly between jurisdictions. <div><br/> Given the costs, inconvenience, and in some cases - <i> impracticality </i> - of some of these recommendations, I expect compliance will be limited. I'm sure the CDC knows that. </div> <br/> So far (#[#[x:73]#]#), and the current crop of swine-variant (#[#[x:72]#]#) viruses, haven't acquired the ability to spread efficiently in humans. Hopefully, they never will. <div><br/> But venues like <b> state and county fairs </b> , and <b> multi-species farms </b> , can provide viruses with evolutionary opportunities they might otherwise not encounter. </div> <br/> Since hope is not a plan, next month ((#[#[x:75]#]#)) the CDC will hold a COCA call for clinicians and healthcare facilities on recognizing, treating, and reporting (#[#[x:74]#]#) in humans. <div><br/>\n<b> Update on Highly Pathogenic (#[#[x:76]#]#) A((#[#[x:77]#]#)) Virus for Clinicians and Healthcare Centers </b><br/>\n<br/> = Free Continuing Education </div><div><b> Overview </b></div><div> Highly Pathogenic (#[#[x:78]#]#) (HPAI) ((#[#[x:79]#]#)) virus is widespread among wild birds and continues to cause outbreaks in poultry and spillover to mammals. In (#[#[x:83]#]#), HPAI A((#[#[x:80]#]#)) virus was detected in dairy cattle. To date, there have been three human cases of HPAI A((#[#[x:81]#]#)) virus infection identified in dairy farm workers in the (#[#[x:82]#]#). </div><div><b> The risk to the public from HPAI A((#[#[x:84]#]#)) viruses is low; </b> however, <b> people who have job-related or recreational exposure to infected birds or animals, including dairy cattle, are at greater risk </b> of HPAI A((#[#[x:85]#]#)) virus infection. During this COCA Call, presenters will give an update on the current outbreak in the (#[#[x:86]#]#) and current CDC surveillance and monitoring efforts. They will also provide <b> information for clinicians on testing, using antivirals, and infection prevention and control recommendations. </b></div> <br/>\n<i> Stay tuned. <br/>\n<br/>\n<br/> https://afludiary.blogspot.com/2024/...-guidance.html </i><br/> ​ </div>\n</div>\n\n\n<div> All medical discussions are for educational purposes. I am not a doctor, just a retired paramedic. Nothing I post should be construed as specific medical advice. If you have a medical problem, see your physician. </div>\n\n</div>\n</div></div>",
+            "nlp_list": [
+                {
+                    "nlp_index": 18,
+                    "display_text": "Influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 19,
+                    "display_text": "Influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 20,
+                    "display_text": "Influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 21,
+                    "display_text": "influenza A",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 22,
+                    "display_text": "influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 23,
+                    "display_text": "flu",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 24,
+                    "display_text": "the year",
+                    "category": "date"
+                },
+                {
+                    "nlp_index": 25,
+                    "display_text": "influenza A",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 26,
+                    "display_text": "influenza A",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 27,
+                    "display_text": "influenza A",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 28,
+                    "display_text": "avian influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 1,
+                    "display_text": "Influenza A",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 2,
+                    "display_text": "Influenza A",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 3,
+                    "display_text": "Swine Flu",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 4,
+                    "display_text": "influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 5,
+                    "display_text": "United States",
+                    "category": "location"
+                },
+                {
+                    "nlp_index": 6,
+                    "display_text": "H1N1",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 7,
+                    "display_text": "influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 8,
+                    "display_text": "influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 9,
+                    "display_text": "influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 10,
+                    "display_text": "Influenza A",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 11,
+                    "display_text": "flu",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 12,
+                    "display_text": "H5N1",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 13,
+                    "display_text": "March of 2024",
+                    "category": "date"
+                },
+                {
+                    "nlp_index": 14,
+                    "display_text": "H5N1",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 15,
+                    "display_text": "H5N1",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 16,
+                    "display_text": "Minnesota",
+                    "category": "location"
+                },
+                {
+                    "nlp_index": 17,
+                    "display_text": "influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 29,
+                    "display_text": "avian influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 30,
+                    "display_text": "H5N1",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 31,
+                    "display_text": "March 2024",
+                    "category": "date"
+                },
+                {
+                    "nlp_index": 32,
+                    "display_text": "Influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 33,
+                    "display_text": "influenza A",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 34,
+                    "display_text": "influenza A",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 35,
+                    "display_text": "influenza A",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 36,
+                    "display_text": "influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 37,
+                    "display_text": "influenza A",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 38,
+                    "display_text": "Influenza A",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 39,
+                    "display_text": "flu",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 40,
+                    "display_text": "influenza A",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 41,
+                    "display_text": "influenza A",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 42,
+                    "display_text": "influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 43,
+                    "display_text": "flu",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 44,
+                    "display_text": "influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 45,
+                    "display_text": "influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 46,
+                    "display_text": "Influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 47,
+                    "display_text": "flu",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 48,
+                    "display_text": "influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 49,
+                    "display_text": "flu",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 50,
+                    "display_text": "flu",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 51,
+                    "display_text": "Influenza A",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 52,
+                    "display_text": "diarrhea",
+                    "category": "syndrome"
+                },
+                {
+                    "nlp_index": 53,
+                    "display_text": "vomiting",
+                    "category": "syndrome"
+                },
+                {
+                    "nlp_index": 54,
+                    "display_text": "cough",
+                    "category": "syndrome"
+                },
+                {
+                    "nlp_index": 55,
+                    "display_text": "fever",
+                    "category": "syndrome"
+                },
+                {
+                    "nlp_index": 56,
+                    "display_text": "Flu",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 57,
+                    "display_text": "influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 58,
+                    "display_text": "avian influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 59,
+                    "display_text": "Influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 60,
+                    "display_text": "influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 61,
+                    "display_text": "flu",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 62,
+                    "display_text": "flu",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 63,
+                    "display_text": "influenza A",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 64,
+                    "display_text": "influenza A",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 65,
+                    "display_text": "fever",
+                    "category": "syndrome"
+                },
+                {
+                    "nlp_index": 66,
+                    "display_text": "cough",
+                    "category": "syndrome"
+                },
+                {
+                    "nlp_index": 67,
+                    "display_text": "diarrhea",
+                    "category": "syndrome"
+                },
+                {
+                    "nlp_index": 68,
+                    "display_text": "vomiting",
+                    "category": "syndrome"
+                },
+                {
+                    "nlp_index": 69,
+                    "display_text": "influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 70,
+                    "display_text": "influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 71,
+                    "display_text": "United States",
+                    "category": "location"
+                },
+                {
+                    "nlp_index": 72,
+                    "display_text": "influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 73,
+                    "display_text": "H5N1",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 74,
+                    "display_text": "H5N1",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 75,
+                    "display_text": "July 16th",
+                    "category": "date"
+                },
+                {
+                    "nlp_index": 76,
+                    "display_text": "Avian Influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 77,
+                    "display_text": "H5N1",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 78,
+                    "display_text": "Avian Influenza",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 79,
+                    "display_text": "H5N1",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 80,
+                    "display_text": "H5N1",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 81,
+                    "display_text": "H5N1",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 82,
+                    "display_text": "United States",
+                    "category": "location"
+                },
+                {
+                    "nlp_index": 83,
+                    "display_text": "March 2024",
+                    "category": "date"
+                },
+                {
+                    "nlp_index": 84,
+                    "display_text": "H5N1",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 85,
+                    "display_text": "H5N1",
+                    "category": "disease"
+                },
+                {
+                    "nlp_index": 86,
+                    "display_text": "United States",
+                    "category": "location"
+                }
+            ]
+        },
+        {
+            "article_reviewdata_field_id": 4,
+            "value": "2024-06-29T13:22:16;",
+            "value_original_language": null,
+            "value_with_nlp": "2024-06-29T13:22:16;",
+            "nlp_list": []
+        }
+    ]
+}

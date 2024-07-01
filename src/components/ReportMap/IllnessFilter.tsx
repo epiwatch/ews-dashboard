@@ -13,8 +13,6 @@ import Chip from "@mui/material/Chip";
 import { Disease, Syndrome } from "@/types";
 import { useTranslation } from "react-i18next";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import { LocalizationProvider } from "@mui/x-date-pickers";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { checkLang } from "@/components/utils/dataUtils";
 import { Dayjs } from "dayjs";
 
@@ -87,133 +85,131 @@ export default function IllnessFilter({
   };
 
   return (
-    <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale={i18n.language}>
-      <ClickAwayListener onClickAway={() => handleFilterChange(false)}>
-        <Box>
-          <IconButton
-            className={styles.diseaseFilterButton}
-            size="small"
-            onClick={() => handleFilterChange(!showFilters)}>
-            <FilterAltOutlined />
-          </IconButton>
+    <ClickAwayListener onClickAway={() => handleFilterChange(false)}>
+      <Box>
+        <IconButton
+          className={styles.diseaseFilterButton}
+          size="small"
+          onClick={() => handleFilterChange(!showFilters)}>
+          <FilterAltOutlined />
+        </IconButton>
 
-          {showFilters && (
-            <Card className={styles.diseaseFilter}>
-              <CardContent className={styles.searchContainer}>
-                <Grid container spacing={2} sx={{ padding: "10px 0px" }}>
-                  <Grid item xs={6}>
-                    <DatePicker
-                      label={t("map.start_date_tag")}
-                      value={dateRangeStart}
-                      onChange={(newValue) => setDateRangeStart(newValue)}
-                      slotProps={{ textField: { size: "small" } }}
-                    />
-                  </Grid>
-                  <Grid item xs={6}>
-                    <DatePicker
-                      label={t("map.end_date_tag")}
-                      value={dateRangeEnd}
-                      slotProps={{ textField: { size: "small" } }}
-                      onChange={(newValue) => setDateRangeEnd(newValue)}
-                    />
-                  </Grid>
+        {showFilters && (
+          <Card className={styles.diseaseFilter}>
+            <CardContent className={styles.searchContainer}>
+              <Grid container spacing={2} sx={{ padding: "10px 0px" }}>
+                <Grid item xs={6}>
+                  <DatePicker
+                    label={t("map.start_date_tag")}
+                    value={dateRangeStart}
+                    onChange={(newValue) => setDateRangeStart(newValue)}
+                    slotProps={{ textField: { size: "small" } }}
+                  />
                 </Grid>
-                <Autocomplete
-                  multiple
-                  size="small"
-                  id="tags-outlined"
-                  options={mapDiseases}
-                  onChange={setAndCheckDiseases}
-                  value={selectedDiseases}
-                  sx={{ marginBottom: "10px" }}
-                  getOptionDisabled={checkItemDisabled}
-                  disableCloseOnSelect
-                  renderInput={(params) => (
-                    <TextField
-                      {...params}
-                      label={t("map.diseases_tag")}
-                      variant="standard"
+                <Grid item xs={6}>
+                  <DatePicker
+                    label={t("map.end_date_tag")}
+                    value={dateRangeEnd}
+                    slotProps={{ textField: { size: "small" } }}
+                    onChange={(newValue) => setDateRangeEnd(newValue)}
+                  />
+                </Grid>
+              </Grid>
+              <Autocomplete
+                multiple
+                size="small"
+                id="tags-outlined"
+                options={mapDiseases}
+                onChange={setAndCheckDiseases}
+                value={selectedDiseases}
+                sx={{ marginBottom: "10px" }}
+                getOptionDisabled={checkItemDisabled}
+                disableCloseOnSelect
+                renderInput={(params) => (
+                  <TextField
+                    {...params}
+                    label={t("map.diseases_tag")}
+                    variant="standard"
+                  />
+                )}
+                getOptionLabel={(option) =>
+                  option !== null && option.name !== undefined
+                    ? option.name
+                    : option.disease
+                }
+                renderTags={(value, getTagProps) =>
+                  value.map((option, index) => (
+                    <Chip
+                      label={
+                        option !== null && option.name !== undefined
+                          ? option.name
+                          : option.disease
+                      }
+                      size="small"
+                      {...getTagProps({ index })}
+                      sx={
+                        option !== null && allDiseases !== null && option.name == allDiseases.name
+                          ? { backgroundColor: "#fdb950" }
+                          : null
+                      }
+                      key={index}
                     />
-                  )}
-                  getOptionLabel={(option) =>
-                    option !== null && option.name !== undefined
-                      ? option.name
-                      : option.disease
-                  }
-                  renderTags={(value, getTagProps) =>
-                    value.map((option, index) => (
-                      <Chip
-                        label={
-                          option !== null && option.name !== undefined
-                            ? option.name
-                            : option.disease
-                        }
-                        size="small"
-                        {...getTagProps({ index })}
-                        sx={
-                          option !== null && allDiseases !== null && option.name == allDiseases.name
-                            ? { backgroundColor: "#fdb950" }
-                            : null
-                        }
-                        key={index}
-                      />
-                    ))
-                  }
-                />
-                <Autocomplete
-                  multiple
-                  size="small"
-                  id="tags-outlined"
-                  options={mapSyndromes}
-                  onChange={(_, v) => {
-                    setSelectedSyndromes([...v]);
-                  }}
-                  value={selectedSyndromes}
-                  getOptionLabel={(option) =>
-                    option !== null && option.name !== undefined
-                      ? option.name
-                      : option.syndrome
-                  }
-                  disableCloseOnSelect
-                  renderInput={(params) => (
-                    <TextField
-                      {...params}
-                      label={t("map.syndromes_tag")}
-                      variant="standard"
-                    />
-                  )}
-                />
-              </CardContent>
-              <CardActions className={styles.buttonContainer}>
-                <Button
-                  variant="contained"
-                  size="small"
-                  className={styles.allDiseasesButton}
-                  onClick={setAllDiseases}
-                >
-                  {t("map.all_diseases_upper")}
-                </Button>
-                <Button
-                  variant="contained"
-                  size="small"
-                  className={styles.fitlerApplyButton}
-                  onClick={() => applyDiseaseSyndromeFilter()}
-                >
-                  {t("map.apply_tag")}
-                </Button>
-                <Button
-                  variant="contained"
-                  size="small"
-                  className={styles.clearButton}
-                  onClick={clearAllDisease}
-                >
-                  {t("map.clear")}
-                </Button>
-              </CardActions>
-            </Card>
-          )}
-        </Box>
-      </ClickAwayListener>
-    </LocalizationProvider>
+                  ))
+                }
+              />
+              <Autocomplete
+                multiple
+                size="small"
+                id="tags-outlined"
+                options={mapSyndromes}
+                onChange={(_, v) => {
+                  setSelectedSyndromes([...v]);
+                }}
+                value={selectedSyndromes}
+                getOptionLabel={(option) =>
+                  option !== null && option.name !== undefined
+                    ? option.name
+                    : option.syndrome
+                }
+                disableCloseOnSelect
+                renderInput={(params) => (
+                  <TextField
+                    {...params}
+                    label={t("map.syndromes_tag")}
+                    variant="standard"
+                  />
+                )}
+              />
+            </CardContent>
+            <CardActions className={styles.buttonContainer}>
+              <Button
+                variant="contained"
+                size="small"
+                className={styles.allDiseasesButton}
+                onClick={setAllDiseases}
+              >
+                {t("map.all_diseases_upper")}
+              </Button>
+              <Button
+                variant="contained"
+                size="small"
+                className={styles.fitlerApplyButton}
+                onClick={() => applyDiseaseSyndromeFilter()}
+              >
+                {t("map.apply_tag")}
+              </Button>
+              <Button
+                variant="contained"
+                size="small"
+                className={styles.clearButton}
+                onClick={clearAllDisease}
+              >
+                {t("map.clear")}
+              </Button>
+            </CardActions>
+          </Card>
+        )}
+      </Box>
+    </ClickAwayListener>
   );
 }

@@ -2,6 +2,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import DatasetIcon from "@mui/icons-material/Dataset";
 import HomeIcon from "@mui/icons-material/Home";
 import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
+import NewspaperIcon from '@mui/icons-material/Newspaper';
 
 export const DateFormat = "DD/MM/YYYY";
 
@@ -89,6 +90,11 @@ export const EpiwatchRoutes = [
     name: "Stats",
     icon: SignalCellularAltIcon,
     path: "/stats",
+  },
+  {
+    name: "Articles",
+    icon: NewspaperIcon,
+    path: "/articles"
   },
   {
     name: "Dataset",

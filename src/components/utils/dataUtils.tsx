@@ -6,6 +6,12 @@ import {
 } from "@/types";
 import { i18n } from "i18next";
 
+export const compareText = function (a: string, b: string) {
+  const textA = a.toUpperCase();
+  const textB = b.toUpperCase();
+  return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+};
+
 export const transferColorProperty = (
   checkArray: Array<CheckArrayType>,
   selections: Array<SelectionType>,

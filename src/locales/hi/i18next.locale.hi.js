@@ -7,6 +7,7 @@ export const i18next_hi = {
     Home: "घर",
     Map: "नक्श",
     Stats: "आँकड़",
+    Articles: "सामग्री",
     Dataset: "डेटासेट"
   },
   home: {
